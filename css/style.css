@@ -1,0 +1,125 @@
+@charset "utf-8";
+
+body {
+  background-color: #f9f5f1;
+}
+ul {
+  display: flex;
+  justify-content: end;
+  gap: 60px;
+  margin: 50px 45px 50px 0;
+}
+.mainvisual {
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  margin-top: 150px;
+  margin-bottom: 280px;
+}
+.object {
+  position: relative;
+}
+.object .white_kumo {
+  position: absolute;
+  top: 60%;
+}
+#concept {
+  position: absolute;
+  background-color: #fff;
+  top: 80%;
+  left: 60%;
+  text-align: end;
+}
+
+.concept_title h2 {
+  font-size: 6.25em;
+  margin-bottom: 1.2%;
+}
+.concept_title p {
+  font-size: 1.563em;
+  letter-spacing: 0.26em;
+  margin-bottom: 15%;
+}
+.concept_text {
+  text-align: center;
+}
+.concept_text p {
+  font-size: 2.125em;
+  margin-bottom: 50px;
+}
+#about {
+  width: 100%;
+  background-color: #fff;
+  padding-top: 365px;
+}
+.about_object {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: #e9cbc6;
+}
+
+.about_title {
+  position: relative;
+}
+.about_title h2 {
+  position: absolute;
+  font-size: 6.25em;
+  transform: rotate(90deg);
+}
+.about_title p {
+  position: absolute;
+  font-size: 1.563em;
+  letter-spacing: 0.26em;
+  transform: rotate(90deg);
+}
+.about_wrap {
+  position: relative;
+}
+.about_txt_bg {
+  position: absolute;
+  z-index: 3;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background-color: #f4e5e2;
+  margin-left: 40%;
+}
+.about_text p {
+  position: absolute;
+  z-index: 4;
+  left: 45%;
+
+  width: 450px;
+  font-size: 17px;
+  line-height: 2rem;
+}
+.about_wrap .about_img {
+  position: absolute;
+  z-index: 1;
+  top: -3%;
+  left: 35%;
+  z-index: 1;
+}
+.about_wrap .about_img2 {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  z-index: 2;
+  left: 27%;
+  margin-top: 380px;
+}
+.btn {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #77aaad;
+}
