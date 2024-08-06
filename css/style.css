@@ -23,23 +23,16 @@ li {
   justify-content: center;
   max-width: 100%;
   margin-top: 150px;
-  margin-bottom: 280px;
-}
-.object {
-  position: relative;
-}
-.object .white_kumo {
-  position: absolute;
-  top: 60%;
-}
-#concept {
-  position: absolute;
-  background-color: #fff;
-  top: 80%;
-  left: 60%;
-  text-align: end;
+  margin-bottom: 1200px;
 }
 
+#concept {
+  position: relative;
+}
+.concept_title {
+  text-align: end;
+  margin-right: 4.2%;
+}
 .concept_title h2 {
   font-size: 6.25em;
   margin-bottom: 1.2%;
@@ -47,41 +40,64 @@ li {
 .concept_title p {
   font-size: 1.563em;
   letter-spacing: 0.26em;
-  margin-bottom: 15%;
 }
 .concept_text {
-  text-align: center;
+  background-color: #fff;
+  text-align: end;
+  padding: 10% 14.6% 10% 0;
 }
 .concept_text p {
   font-size: 2.125em;
+  letter-spacing: 0.37em;
   margin-bottom: 50px;
+}
+#concept .white_kumo {
+  position: absolute;
+  bottom: 60%;
+  z-index: -1;
+}
+#concept .img_kumo {
+  position: absolute;
+  bottom: 70%;
+  z-index: -2;
 }
 #about {
   width: 100%;
   background-color: #fff;
-  padding-top: 365px;
 }
-.about_object {
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  background-color: #e9cbc6;
+.about {
+  position: relative;
 }
 
 .about_title {
-  position: relative;
-}
-.about_title h2 {
   position: absolute;
-  font-size: 6.25em;
+  top: -25%;
+  left: 3%;
+  z-index: 10;
   transform: rotate(90deg);
+  transform-origin: left bottom;
 }
+
 .about_title p {
-  position: absolute;
   font-size: 1.563em;
   letter-spacing: 0.26em;
-  transform: rotate(90deg);
+  padding-bottom: 2%;
 }
+
+.about_object {
+  width: 22%;
+  height: 30.7%;
+  border-radius: 50%;
+  background-color: #e9cbc6;
+  position: absolute;
+  left: -2.3%;
+  top: -20%;
+  z-index: 3;
+}
+.about_title h2 {
+  font-size: 6.25em;
+}
+
 .about_wrap {
   position: relative;
 }
@@ -125,7 +141,6 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fff;
 }
 .circle {
   width: 100px;
@@ -138,40 +153,41 @@ li {
   padding-top: 10px;
   padding-bottom: 150px;
 }
-.service_title {
-  text-align: right;
-  padding-right: 40px;
-  position: relative;
-}
-.service_title h2 {
-  font-size: 6.25em;
-  padding-top: 175px;
-  margin-bottom: 1.2%;
+#service {
+  width: 100%;
 }
 .service {
   position: relative;
 }
+.service_title {
+  position: absolute;
+  right: 6.2%;
+  top: 12.8%;
+}
 .service_object {
-  width: 300px;
-  height: 300px;
+  width: 22%;
+  height: 18.8%;
   border-radius: 50%;
   background-color: #fff;
   position: absolute;
-  top: 52px;
-  left: 80%;
+  top: 4%;
+  right: -2.6%;
   z-index: -1;
 }
+.service_title h2 {
+  font-size: 6.25em;
+}
+
 .service_title p {
   font-size: 1.563em;
   letter-spacing: 0.26em;
-  margin-bottom: 15%;
 }
 .service_wrap {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   max-width: 74%;
   margin: 0 auto;
-  margin-bottom: 150px;
+  padding: 33% 0 40% 0;
 }
 .service_frex {
   width: 88%;
@@ -185,6 +201,7 @@ li {
   height: 400px;
   background-color: #fff;
   border-radius: 150px 150px 0 0;
+  margin: 0 auto;
 }
 .service_detail h3 {
   font-size: 2.4rem;
@@ -194,51 +211,59 @@ li {
 .h3_1 {
   position: absolute;
   bottom: 35px;
-  left: 45px;
+  left: 70px;
 }
 .h3_2 {
   position: absolute;
   bottom: 35px;
-  left: 87px;
+  left: 110px;
 }
 .h3_3 {
   position: absolute;
   bottom: 35px;
-  left: 86px;
+  left: 100px;
 }
 .service_detail .img1 {
   position: absolute;
   top: 50px;
-  left: -9px;
+  left: 1%;
 }
 .service_detail .img2 {
   position: absolute;
   top: 98px;
-  left: 32px;
+  left: 60px;
 }
 .service_detail .img3 {
   position: absolute;
   top: 102px;
-  left: 18px;
+  left: 30px;
 }
 .service_frex p {
   width: 86%;
   padding-top: 24px;
   line-height: 1.8rem;
+  margin: 0 auto;
 }
 #works {
+  width: 100%;
   background-color: #ffebc6;
 }
-
-.works_title {
-  transform: rotate(90deg);
+.works {
   position: relative;
-  right: 45%;
+}
+.works_title {
+  position: absolute;
+  top: -25%;
+  left: 3%;
+  z-index: 10;
+  transform: rotate(90deg);
+  transform-origin: left bottom;
 }
 
 .works_title p {
-  position: absolute;
-  top: -30%;
+  font-size: 1.563em;
+  letter-spacing: 0.26em;
+  padding-bottom: 2%;
 }
 
 .works_object {
@@ -246,4 +271,19 @@ li {
   height: 300px;
   border-radius: 50%;
   background-color: #ffd78d;
+  position: absolute;
+  left: -2.3%;
+  top: -20%;
+  z-index: 3;
+}
+
+.worksbg_object .white_kumo {
+  position: absolute;
+  top: -35%;
+  z-index: -2;
+}
+.worksbg_object .img_kumo {
+  position: absolute;
+  top: -30%;
+  z-index: -1;
 }
