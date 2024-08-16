@@ -3,6 +3,51 @@
 body {
   background-color: #f9f5f1;
 }
+
+/* Loading背景画面設定　*/
+#splash {
+  /*fixedで全面に固定*/
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background: #f9f5f1;
+  text-align: center;
+  color: #fff;
+}
+
+/* Loading画像中央配置　*/
+#splash_logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Loading アイコンの大きさ設定　*/
+#splash_logo img {
+  width: 300px;
+}
+
+/* fadeUpをするアイコンの動き */
+.fadeUp {
+  animation-name: fadeUpAnime;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 h2 {
   font-family: Palatino;
   font-weight: lighter;
@@ -11,8 +56,7 @@ h2 {
 ul {
   display: flex;
   justify-content: end;
-  gap: 60px;
-  margin: 50px 45px 50px 0;
+  gap: 25%;
 }
 li {
   font-family: Palatino;
@@ -22,10 +66,166 @@ li {
   display: flex;
   justify-content: center;
   max-width: 100%;
-  margin-top: 150px;
-  margin-bottom: 1200px;
+  padding-top: 250px;
+  padding-bottom: 1200px;
+  position: relative;
+  overflow: hidden;
 }
-
+.pc_nav {
+  position: fixed;
+  top: 7%;
+  right: 3%;
+  z-index: 100;
+}
+.sp_nav,
+.sp_btn {
+  display: none;
+}
+.menu_object {
+  width: 200px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: #ffd78d;
+  position: fixed;
+  top: -57px;
+  right: -35px;
+  z-index: 99;
+}
+.flame_top {
+  font-family: Palatino;
+  color: #77aaad;
+  font-size: 14px;
+  letter-spacing: 0.3em;
+  position: absolute;
+  top: 2%;
+  left: 3.3%;
+}
+.flame_top2 {
+  font-family: Palatino;
+  color: #77aaad;
+  font-size: 14px;
+  letter-spacing: 0.3em;
+  position: absolute;
+  top: 3%;
+  left: 3.9%;
+  transform: rotate(90deg);
+  transform-origin: left top;
+}
+.flame_bottom {
+  font-family: Palatino;
+  color: #77aaad;
+  font-size: 14px;
+  letter-spacing: 0.3em;
+  position: absolute;
+  top: 34%;
+  left: 3.9%;
+  transform: rotate(90deg);
+  transform-origin: left top;
+}
+.flame_bottom2 {
+  font-family: Palatino;
+  color: #77aaad;
+  font-size: 14px;
+  letter-spacing: 0.3em;
+  position: absolute;
+  top: 42%;
+  left: 3.3%;
+}
+.flame_rigth {
+  font-family: Palatino;
+  color: #77aaad;
+  font-size: 14px;
+  letter-spacing: 0.3em;
+  position: absolute;
+  top: 18%;
+  right: 3.9%;
+  transform: rotate(-90deg);
+  transform-origin: right bottom;
+}
+.flower_fv_bg {
+  position: absolute;
+  top: 42%;
+  right: 3.9%;
+}
+@media screen and (max-width: 850px) {
+  .pc_nav {
+    display: none;
+  }
+  /*ハンバーガー*/
+  .sp_btn {
+    display: block;
+    height: 23px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    z-index: 101;
+  }
+  .sp_btn span {
+    display: block;
+    width: 33px;
+    height: 3px;
+    background-color: #826b63;
+    border-radius: 2px;
+    /*位置の調整ー*/
+    position: relative;
+    top: 40px;
+    /*ボタンの変化*/
+    transition: 0.3s;
+  }
+  .sp_btn span::before,
+  .sp_btn span::after {
+    content: "";
+    display: block;
+    width: 33px;
+    height: 3px;
+    background-color: #826b63;
+    border-radius: 2px;
+    position: absolute;
+    transition: 0.3s;
+  }
+  .sp_btn span::before {
+    bottom: 10px;
+  }
+  .sp_btn span::after {
+    top: 10px;
+  }
+  /*ばつ印*/
+  .sp_btn.open span {
+    background: transparent;
+  }
+  .sp_btn.open span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+  }
+  .sp_btn.open span::after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+  .sp_nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80%;
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+    z-index: 100;
+  }
+  .sp_nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20%;
+    align-items: flex-start;
+    height: 50%;
+    padding: 35% 0 0 30%;
+  }
+  .sp_nav ul li {
+    color: #826b63;
+    font-size: 30px;
+    font-family: Palatino;
+  }
+}
 #concept {
   position: relative;
 }
@@ -51,6 +251,16 @@ li {
   letter-spacing: 0.37em;
   margin-bottom: 50px;
 }
+#concept .flower_concept_bg {
+  position: absolute;
+  left: 20%;
+  top: 20%;
+}
+#concept .leaf_concept_bg {
+  position: absolute;
+  right: 5%;
+  top: 80%;
+}
 #concept .white_kumo {
   position: absolute;
   bottom: 60%;
@@ -60,6 +270,26 @@ li {
   position: absolute;
   bottom: 70%;
   z-index: -2;
+}
+.fadein {
+  opacity: 0;
+  animation: fadein 6s ease forwards;
+}
+@keyframes fadein {
+  100% {
+    opacity: 1;
+  }
+}
+
+/*以下遅延の指定*/
+.txt01 {
+  animation-delay: 1s;
+}
+.txt02 {
+  animation-delay: 3s;
+}
+.txt03 {
+  animation-delay: 5s;
 }
 #about {
   width: 100%;
@@ -71,7 +301,7 @@ li {
 
 .about_title {
   position: absolute;
-  top: -25%;
+  top: -20%;
   left: 3%;
   z-index: 10;
   transform: rotate(90deg);
@@ -85,8 +315,8 @@ li {
 }
 
 .about_object {
-  width: 22%;
-  height: 30.7%;
+  width: 300px;
+  aspect-ratio: 1;
   border-radius: 50%;
   background-color: #e9cbc6;
   position: absolute;
@@ -97,44 +327,73 @@ li {
 .about_title h2 {
   font-size: 6.25em;
 }
-
 .about_wrap {
-  position: relative;
+  max-width: 100%;
+  display: flex;
+  justify-content: flex-end;
 }
-.about_txt_bg {
+.about_text {
   position: relative;
   z-index: 3;
   width: 600px;
-  height: 600px;
+  aspect-ratio: 1;
   border-radius: 50%;
   background-color: #f4e5e2;
-  margin-left: 40%;
+  text-align: right;
+  margin-right: 17%;
 }
 
 .about_text p {
   position: absolute;
-  z-index: 4;
-  left: 45%;
-  padding-top: 200px;
+  left: 12%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
   width: 450px;
+  text-align: left;
   font-size: 17px;
   line-height: 2rem;
 }
 .about_wrap .about_img {
   position: absolute;
+  width: 716px;
+
   z-index: 1;
-  top: -3%;
-  left: 35%;
-  z-index: 1;
+  top: -1%;
+  right: 13%;
 }
 .about_wrap .about_img2 {
   width: 300px;
-  height: 300px;
+  aspect-ratio: 1;
   position: absolute;
   z-index: 2;
   top: 35%;
-  left: 25%;
+  right: 57%;
 }
+.flower_about_bg {
+  position: absolute;
+  right: 3.6%;
+  bottom: 0;
+}
+a.btn--circle {
+  width: 100px;
+  height: 100px;
+  padding: 0;
+  background: #77aaad;
+  border-radius: 50%;
+}
+
+a.btn--circle i {
+  font-size: 150%;
+  line-height: 60px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  letter-spacing: 0;
+}
+a.btn--circle:hover i {
+  line-height: 55px;
+}
+
 .btn {
   height: 100%;
   padding-top: 100px;
@@ -142,31 +401,48 @@ li {
   justify-content: center;
   align-items: center;
 }
-.circle {
+/*.circle {
   width: 100px;
   height: 100px;
   border-radius: 50%;
   background-color: #77aaad;
-}
+}*/
 .btn_wrap p {
   text-align: center;
   padding-top: 10px;
   padding-bottom: 150px;
 }
+@media screen and (max-width: 1100px) {
+  .about_text {
+  }
+  .about_wrap .about_img {
+  }
+}
 #service {
-  width: 100%;
+  max-width: 100%;
 }
 .service {
   position: relative;
+  overflow: hidden;
+}
+.leaf_service_bg {
+  position: absolute;
+  top: 9.4%;
+  left: 9.4%;
+}
+.flower_service_bg {
+  position: absolute;
+  top: 70%;
+  left: 25%;
 }
 .service_title {
   position: absolute;
   right: 6.2%;
-  top: 12.8%;
+  top: 10%;
 }
 .service_object {
-  width: 22%;
-  height: 18.8%;
+  width: 300px;
+  aspect-ratio: 1;
   border-radius: 50%;
   background-color: #fff;
   position: absolute;
@@ -179,6 +455,7 @@ li {
 }
 
 .service_title p {
+  text-align: end;
   font-size: 1.563em;
   letter-spacing: 0.26em;
 }
@@ -187,73 +464,88 @@ li {
   justify-content: center;
   max-width: 74%;
   margin: 0 auto;
-  padding: 33% 0 40% 0;
+  padding: 30% 0 20% 0;
 }
 .service_frex {
   width: 88%;
-  margin: 0 auto;
-}
-.service_detail {
-  position: relative;
+  margin: 0 auto 20% auto;
 }
 .service_detail_flame {
-  width: 300px;
-  height: 400px;
+  width: 82%;
+  aspect-ratio: 0.75;
   background-color: #fff;
   border-radius: 150px 150px 0 0;
   margin: 0 auto;
+  position: relative;
 }
-.service_detail h3 {
+.service_frex h3 {
   font-size: 2.4rem;
   font-family: Palatino;
   font-weight: lighter;
 }
 .h3_1 {
-  position: absolute;
-  bottom: 35px;
-  left: 70px;
+  text-align: center;
+  padding-top: 100%;
 }
 .h3_2 {
-  position: absolute;
-  bottom: 35px;
-  left: 110px;
+  text-align: center;
+  padding-top: 100%;
 }
 .h3_3 {
-  position: absolute;
-  bottom: 35px;
-  left: 100px;
+  text-align: center;
+  padding-top: 100%;
 }
-.service_detail .img1 {
+.service_frex .img1 {
+  width: 90%;
+  height: auto;
   position: absolute;
-  top: 50px;
-  left: 1%;
+  top: 2%;
+  left: 6%;
 }
-.service_detail .img2 {
+.service_frex .img2 {
+  width: 90%;
+  height: auto;
   position: absolute;
-  top: 98px;
-  left: 60px;
+  top: 2%;
+  left: 6%;
 }
-.service_detail .img3 {
+.service_frex .img3 {
+  width: 90%;
+  height: auto;
   position: absolute;
-  top: 102px;
-  left: 30px;
+  top: 2%;
+  left: 6%;
 }
 .service_frex p {
-  width: 86%;
-  padding-top: 24px;
+  width: 80%;
   line-height: 1.8rem;
-  margin: 0 auto;
+  margin: 7% auto;
+}
+@media screen and (max-width: 767px) {
+  .service_wrap {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.service_detail_flame {
+  border-radius: 220px 220px 0 0;
 }
 #works {
-  width: 100%;
+  max-width: 100%;
   background-color: #ffebc6;
 }
 .works {
   position: relative;
 }
+.flower_works_bg {
+  position: absolute;
+  top: 75%;
+  left: 5%;
+}
+
 .works_title {
   position: absolute;
-  top: -25%;
+  top: -20%;
   left: 3%;
   z-index: 10;
   transform: rotate(90deg);
@@ -286,4 +578,135 @@ li {
   position: absolute;
   top: -30%;
   z-index: -1;
+}
+.works_img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide img {
+  transform: scale(0.5);
+  transition: transform 0.3s;
+}
+.slide.slick-center img {
+  transform: scale(1);
+}
+.slick-prev {
+  top: 80%;
+  left: 22%;
+  z-index: 99;
+}
+.slick-prev:before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-top: 5px solid #fff;
+  border-left: 5px solid #fff;
+  transform: rotate(-45deg);
+}
+.slick-next {
+  top: 80%;
+  right: 22%;
+  z-index: 99;
+}
+.slick-next:before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-top: 5px solid #fff;
+  border-right: 5px solid #fff;
+  transform: rotate(45deg);
+}
+
+.slick-active {
+  button {
+    background: #ffd78d;
+  }
+}
+#contact {
+  width: 100%;
+  background-color: #fff;
+}
+.contact {
+  position: relative;
+  padding-top: 30%;
+}
+.contact .img1 {
+  position: absolute;
+  top: -15%;
+  left: 0%;
+  z-index: 1;
+}
+.contact_title {
+  position: absolute;
+  top: 46%;
+  left: 3%;
+  z-index: 10;
+  transform: rotate(90deg);
+  transform-origin: left bottom;
+}
+
+.contact_title p {
+  font-size: 1.563em;
+  letter-spacing: 0.26em;
+  padding-bottom: 2%;
+}
+
+.contact_object {
+  width: 300px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: #f9f5f1;
+  position: absolute;
+  left: -2.3%;
+  top: 50%;
+  z-index: 3;
+}
+.contact p {
+  max-width: 48%;
+  margin: 0 auto;
+  padding-top: 10%;
+}
+footer {
+  background-color: #f9f5f1;
+  position: relative;
+}
+.logo {
+  width: 11%;
+  aspect-ratio: 1;
+  position: absolute;
+  top: 25%;
+  left: 12%;
+}
+.footer_menu ul {
+  max-width: 18%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 10% 0 3% 0;
+}
+.footer_menu li {
+  font-family: Palatino;
+  font-weight: lighter;
+  font-size: 12px;
+}
+.footer_menu img {
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 6%;
+}
+small {
+  font-size: 11px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 3%;
+}
+.copylight {
+  font-size: 11px;
+  text-align: center;
+  padding-bottom: 3%;
 }

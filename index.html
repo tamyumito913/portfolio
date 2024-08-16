@@ -6,29 +6,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UPSY DAISY DESIGN</title>
     <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
     <link rel="stylesheet" href="./css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXv
+    ZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <div class="menu">
-        <ul>
-            <li><a href="#">HOME</a></li>
-            <li><a href="#ABOUT">ABOUT</a></li>
-            <li><a href="#SERVICE">SERVICE</a></li>
-            <li><a href="#WORKS">WORKS</a></li>
-            <li><a href="#CONTACT">CONTACT</a></li>
-        </ul>
+    <div id="splash">
+        <div id="splash_logo"><img src="./2x/アセット 3@2x.png" alt="" class="fadeUp"></div><!--画像部分は適宜差し換えてください-->
+        <!--/splash-->
     </div>
-    <div class="flame_left">
-        <p>Flower ideas,</p>
-        <p>blooming designs</p>
-    </div>
-    <div class="flame_left">
-        <p>WebDesigner</p>
-        <p>Mami Ueyoshi portfolio</p>
-    </div>
+
     <div class="mainvisual">
+        <nav class="pc_nav">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#service">SERVICE</a></li>
+                <li><a href="#works">WORKS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+        <div class="sp_btn">
+            <span></span>
+        </div>
+        <nav class="sp_nav">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#service">SERVICE</a></li>
+                <li><a href="#works">WORKS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+        <div class="menu_object"></div>
         <img src="./2x/アセット 3@2x.png" alt="" width="300" height="300">
+        <p class="flame_top">Flower ideas,</p>
+        <p class="flame_top2">blooming designs</p>
+        <p class="flame_bottom">WebDesigner</p>
+        <p class="flame_bottom2">Mami Ueyoshi portfolio</p>
+        <p class="flame_rigth">Designers Life</p>
+        <img class="flower_fv_bg" src="./2x/2x/scuNHo (2)@2x.png" alt="花" width="9%" height="11%">
     </div>
     <div id="concept">
         <div class="concept">
@@ -37,11 +62,13 @@
                 <p>コンセプト</p>
             </div>
             <div class="concept_text">
-                <p>一緒に立ち上がり</p>
-                <p>一緒に上を見上げる</p>
-                <p>そして花ひらく</p>
+                <p class="fadein txt01">一緒に立ち上がり</p>
+                <p class="fadein txt02">一緒に上を見上げる</p>
+                <p class="fadein txt03">そして花ひらく</p>
             </div>
         </div>
+        <img class="flower_concept_bg" src="./2x/2x/scuNHo@2x.png" alt="花" width="9.4%" height="auto">
+        <img class="leaf_concept_bg" src="./2x/2x/usGlKS (2)@2x.png" alt="葉" width="8.4%" height="auto">
         <img class="white_kumo" src="./1x/mokumoku.png" alt="" width="100%">
         <img class="img_kumo" src="./1x/bg_kumo.png" alt="" width="100%">
     </div>
@@ -55,25 +82,30 @@
             <div class="about_wrap">
                 <div class="about_text">
                     <p>福岡県小郡市の自宅にて、ホームページ制作やWeb広告製作を行っているWebデザイナーです。
-                        小さなお悩みからお気軽にご相談いただける、身近な存在を目指し日々活動しています。
-                        想いに寄り添い、コミュニケーションを計りながら丁寧に制作して行きます。
-                        スモールビジネスから中小企業様向けのホームページ制作などでビジネスをサポートいたします</p>
+                        小さなお悩みからお気軽にご相談いただける、身近な存在を目指し日々活動しています。<br>
+                        想いに寄り添い、コミュニケーションを計りながら丁寧に制作して行きます。<br>
+                        スモールビジネスから中小企業様向けのホームページ制作などでビジネスをサポートいたします。</p>
+
                 </div>
-                <div class="about_txt_bg"></div>
                 <img class="about_img" src="./1x/about_text.png" alt="">
                 <img class="about_img2" src="./2x/about@2x.png" alt="">
-                <div class="btn_wrap">
-                    <div class="btn">
-                        <div class="circle"><a href=""></a></div>
-                        <div class="arrow"></div>
-                    </div>
-                    <p>もっと見る</p>
-                </div>
             </div>
+            <div class="btn_wrap">
+                <div class="btn">
+                    <a href="./about.html" class="btn btn--circle btn--circle-c"><i class="fas fa-arrow-up"></i></a>
+                </div>
+                <p>もっと見る</p>
+            </div>
+
+            <img class="flower_about_bg" src="./2x/2x/LLgGO3@2x.png" alt="花" width="12%" height="auto">
+
         </div>
     </div>
     <div id="service">
         <div class="service">
+            <img class="leaf_service_bg" src="./2x/2x/usGlKS@2x.png" alt="葉" width="8.4%" height="auto">
+            <img class="flower_service_bg" src="./2x/2x/2QvYk6@2x.png" alt="花" width="10%" height="auto">
+
             <div class="service_title">
                 <h2>SERVICE</h2>
                 <p>サービス</p>
@@ -81,27 +113,32 @@
             <div class="service_object"></div>
             <div class="service_wrap">
                 <div class=" service_frex">
-                    <div class="service_detail">
-                        <div class="service_detail_flame"></div>
-                        <img class="img1" src="./2x/service2@2x.png" alt="パソコンのイラスト" width="300px" height="225px">
+
+                    <div class="service_detail_flame">
+                        <img class="img1" src="./2x/webdesign@2x.png" alt="パソコンのイラスト">
                         <h3 class="h3_1">Web Design</h3>
+
+
                     </div>
-                    <p>お客さまの要望やらしさを引き出すヒアリングをするところから、イメージを明確にしていきデザインを作成いたします。目的の達成や課題解決ができるように、寄り添ったサービスをご提供いたします。</p>
+                    <p>お客さまの要望やらしさを引き出すヒアリングをするところから、イメージを明確にしていきデザインを作成いたします。目的の達成や課題解決ができるように、寄り添ったサービスをご提供いたします。
+                    </p>
                 </div>
-                <div class=" service_frex">
-                    <div class="service_detail">
-                        <div class="service_detail_flame"></div>
-                        <img class="img2" src="./2x/service3@2x.png" alt="コーディングのイラスト" width="241px" height="180px">
+                <div class=" service_frex" style="margin-top:200px;">
+
+                    <div class="service_detail_flame">
+                        <img class="img2" src="./2x/coding@2x.png" alt="コーディングのイラスト">
                         <h3 class="h3_2">Coding</h3>
+
+
                     </div>
                     <p>パソコンからスマートフォンまで対応したレスポンシブルなサイト、Javascriptを使用した動きのあるサイトを作成します。デザインの意図を考慮してコーディングをすることでお客様の思いやサービスを反映します。
                     </p>
                 </div>
-                <div class=" service_frex">
-                    <div class="service_detail">
-                        <div class="service_detail_flame"></div>
-                        <img class="img3" src="./2x/service1@2x.png" alt="グラフィックのイラスト" width="265px" height="196px">
+                <div class=" service_frex" style="margin-top:400px;">
+                    <div class="service_detail_flame">
+                        <img class="img3" src="./2x/graphic@2x.png" alt="グラフィックのイラスト">
                         <h3 class="h3_3">Graphic</h3>
+
                     </div>
                     <p>チラシ、ショップカードや名刺など、Web媒体以外のデザインも承っております。デザインに関してお悩みがありましたら、遠慮なくご相談ください。
                     </p>
@@ -111,6 +148,7 @@
     </div>
     <div id="works">
         <div class="works">
+            <img class=flower_works_bg src="./2x/2x/アセット 15@2x.png" alt="" width="12%" height="auto">
             <div class="works_title">
                 <p>制作実績</p>
                 <h2>WORKS</h2>
@@ -122,21 +160,70 @@
             </div>
             <div class="works_wrap">
                 <div class="works_img">
-                    <a class="works_img2"><img src="./2x/2x/works4@2x.png" alt="実績の画像2" width="24%" height="24%"></a>
-                    <a class="works_img1"><img src="./2x/2x/アセット 29@2x.png" alt="実績の画像１" width="48%" height="48%"></a>
-                    <a class="works_img3"><img src="./2x/2x/アセット 30@2x.png" alt="実績の画像3" width="24%" height=" 24%"></a>
+                    <div class="slide"><img src="./2x/2x/works4@2x.png"></div>
+                    <div class="slide"><img src="./2x/2x/アセット 41@2x.png"></div>
+                    <div class="slide"><img src="./2x/2x/アセット 30@2x.png"></div>
+                    <div class="slide"><img src="./2x/2x/アセット 40@2x.png"></div>
                 </div>
             </div>
             <div class="btn_wrap">
                 <div class="btn">
-                    <div class="circle"><a href=""></a></div>
-                    <div class="arrow"></div>
+                    <a href="./works.html" class="btn btn--circle btn--circle-c"><i class="fas fa-arrow-up"></i></a>
+
                 </div>
                 <p>もっと見る</p>
             </div>
-            <img src="./1x/1x/アセット 32.png" alt="" width="100%">
+
         </div>
     </div>
+    <div id="contact">
+        <div class="contact">
+            <img class="img1" src="./1x/1x/アセット 32.png" alt="" width="100%">
+            <div class="contact_title">
+                <p>お問い合わせ</p>
+                <h2>CONTACT</h2>
+            </div>
+            <div class="contact_object"></div>
+            <p>ご興味をお持ちいただき、ありがとうございます。<br>
+                ご相談やお見積もりは無料ですのでお気軽にお問い合わせください。</p>
+
+        </div>
+        <footer>
+            <div class="logo"><img src="./2x/アセット 3@2x.png" alt=""></div>
+            <div class="footer_menu">
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#service">SERVICE</a></li>
+                    <li><a href="#works">WORKS</a></li>
+                </ul>
+                <a href="https://www.udd-website.com/"><img src="./2x/2x/2x/アセット 36@2x.png" alt="" width="1.3%"
+                        height="auto"></a>
+            </div>
+            <p class="copylight">&copy;2024 UPSY DAISY DESIGN</small>
+        </footer>
+
+        <script>
+            $(function () {
+                $('.sp_btn').on('click', function () {
+                    $('.sp_nav').fadeToggle();
+                    $('.sp_btn').toggleClass('open')
+                })
+                $(".works_img").slick({
+                    autoplay: true,
+                    dots: true,
+
+                    arrows: true,
+                    variableWidth: true, //左右のスライドを見せるために必要
+                    centerMode: true, //スライドを中心に寄せる
+                    slidesToShow: 3 //スライドの見える枚数に合わせて入れると良い
+                });
+            })
+            $(window).on('load', function () {
+                $("#splash").delay(1800).fadeOut('slow');//ローディング画面を1.5秒（1500ms）待機してからフェードアウト
+                $("#splash_logo").delay(1800).fadeOut('slow');//ロゴを1.2秒（1200ms）待機してからフェードアウト
+            });
+        </script>
 
 
 </body>
