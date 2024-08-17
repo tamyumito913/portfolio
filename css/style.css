@@ -63,14 +63,28 @@ li {
   font-weight: lighter;
 }
 .mainvisual {
-  display: flex;
+  max-width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.mainvisual .logo {
+  width: 300px;
+  aspect-ratio: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*.mainvisual {
+ /*display: flex;
   justify-content: center;
   max-width: 100%;
   padding-top: 250px;
   padding-bottom: 1200px;
   position: relative;
   overflow: hidden;
-}
+}*/
 .pc_nav {
   position: fixed;
   top: 7%;
@@ -97,8 +111,10 @@ li {
   font-size: 14px;
   letter-spacing: 0.3em;
   position: absolute;
-  top: 2%;
-  left: 3.3%;
+  top: 33px;
+  left: 170px;
+  transform: rotate(-180deg);
+  transform-origin: left bottom;
 }
 .flame_top2 {
   font-family: Palatino;
@@ -106,8 +122,8 @@ li {
   font-size: 14px;
   letter-spacing: 0.3em;
   position: absolute;
-  top: 3%;
-  left: 3.9%;
+  top: 60px;
+  left: 52px;
   transform: rotate(90deg);
   transform-origin: left top;
 }
@@ -117,8 +133,8 @@ li {
   font-size: 14px;
   letter-spacing: 0.3em;
   position: absolute;
-  top: 34%;
-  left: 3.9%;
+  bottom: 150px;
+  left: 52px;
   transform: rotate(90deg);
   transform-origin: left top;
 }
@@ -128,8 +144,8 @@ li {
   font-size: 14px;
   letter-spacing: 0.3em;
   position: absolute;
-  top: 42%;
-  left: 3.3%;
+  bottom: 33px;
+  left: 52px;
 }
 .flame_rigth {
   font-family: Palatino;
@@ -137,8 +153,8 @@ li {
   font-size: 14px;
   letter-spacing: 0.3em;
   position: absolute;
-  top: 18%;
-  right: 3.9%;
+  top: 386px;
+  right: 40px;
   transform: rotate(-90deg);
   transform-origin: right bottom;
 }
@@ -226,7 +242,22 @@ li {
     font-family: Palatino;
   }
 }
+.kumo-img {
+  max-width: 100%;
+  position: relative;
+}
+
+.kumo-img .flower_fv_bg {
+  position: absolute;
+  top: -10%;
+  right: 3.9%;
+}
+.white_kumo {
+  position: absolute;
+  bottom: -15%;
+}
 #concept {
+  background-color: #fff;
   position: relative;
 }
 .concept_title {
@@ -261,16 +292,7 @@ li {
   right: 5%;
   top: 80%;
 }
-#concept .white_kumo {
-  position: absolute;
-  bottom: 60%;
-  z-index: -1;
-}
-#concept .img_kumo {
-  position: absolute;
-  bottom: 70%;
-  z-index: -2;
-}
+
 .fadein {
   opacity: 0;
   animation: fadein 6s ease forwards;
@@ -290,6 +312,14 @@ li {
 }
 .txt03 {
   animation-delay: 5s;
+}
+@media screen and (max-width: 767px) {
+  .concept_title h2 {
+    font-size: 11vw;
+  }
+  .concept_title p {
+    font-size: 2.4vw;
+  }
 }
 #about {
   width: 100%;
@@ -335,7 +365,7 @@ li {
 .about_text {
   position: relative;
   z-index: 3;
-  width: 600px;
+  width: 44%;
   aspect-ratio: 1;
   border-radius: 50%;
   background-color: #f4e5e2;
@@ -356,7 +386,7 @@ li {
 }
 .about_wrap .about_img {
   position: absolute;
-  width: 716px;
+  width: 53%;
 
   z-index: 1;
   top: -1%;
@@ -412,12 +442,15 @@ a.btn--circle:hover i {
   padding-top: 10px;
   padding-bottom: 150px;
 }
-@media screen and (max-width: 1100px) {
-  .about_text {
+@media screen and (max-width: 767px) {
+  .about_title h2 {
+    font-size: 11vw;
   }
-  .about_wrap .about_img {
+  .about_title p {
+    font-size: 2.4vw;
   }
 }
+
 #service {
   max-width: 100%;
 }
@@ -521,12 +554,37 @@ a.btn--circle:hover i {
   line-height: 1.8rem;
   margin: 7% auto;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1150px) {
   .service_wrap {
-    flex-direction: column;
-    align-items: flex-start;
+    max-width: 88%;
+  }
+  .service_frex h3 {
+    font-size: 3vw;
   }
 }
+@media screen and (max-width: 767px) {
+  .service_wrap {
+    max-width: 88%;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40% 0 20% 0;
+  }
+
+  .service_frex {
+    margin: 66px auto !important;
+  }
+
+  .service_title h2 {
+    font-size: 11vw;
+  }
+  .cservice_title p {
+    font-size: 2.4vw;
+  }
+  .service_frex h3 {
+    font-size: 10.4vw;
+  }
+}
+
 .service_detail_flame {
   border-radius: 220px 220px 0 0;
 }
@@ -571,12 +629,12 @@ a.btn--circle:hover i {
 
 .worksbg_object .white_kumo {
   position: absolute;
-  top: -35%;
+  top: -40%;
   z-index: -2;
 }
 .worksbg_object .img_kumo {
   position: absolute;
-  top: -30%;
+  top: -35%;
   z-index: -1;
 }
 .works_img {
@@ -620,7 +678,24 @@ a.btn--circle:hover i {
   border-right: 5px solid #fff;
   transform: rotate(45deg);
 }
-
+.slick-dots li button:before {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 10px;
+  background-color: #fff;
+  opacity: 1;
+}
+.slick-dots {
+  bottom: -70px;
+}
+.slick-dots li {
+  margin: 0 50px;
+}
+.slick-dots li.slick-active button:before {
+  background-color: #ffd78d;
+  overflow: 1;
+}
 .slick-active {
   button {
     background: #ffd78d;
@@ -636,7 +711,7 @@ a.btn--circle:hover i {
 }
 .contact .img1 {
   position: absolute;
-  top: -15%;
+  top: -10%;
   left: 0%;
   z-index: 1;
 }
@@ -669,6 +744,72 @@ a.btn--circle:hover i {
   max-width: 48%;
   margin: 0 auto;
   padding-top: 10%;
+}
+.c-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.c-form__item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+}
+.c-form__label,
+.c-form__input {
+  padding: 10px;
+}
+.c-form__label {
+  width: 90%;
+}
+.c-form__input {
+  width: 90%;
+  font-size: 16px;
+  border: solid 1px #333;
+  border-radius: 4px;
+}
+.c-form__input:focus-visible {
+  outline: green auto 1px;
+}
+.c-form__required {
+  color: #fff;
+  background-color: green;
+  border-radius: 4px;
+  padding: 5px 5px;
+  margin: 0 0 0 18px;
+}
+textarea.c-form__input {
+  height: 160px;
+}
+.c-form__submit {
+  text-align: center;
+}
+.c-form__submit button {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  background-color: green;
+  border: solid 1px green;
+  border-radius: 4px;
+  padding: 5px 32px;
+  transition: 0.4s;
+  cursor: pointer;
+}
+.c-form__submit button:hover {
+  color: green;
+  background-color: transparent;
+}
+
+@media (min-width: 640px) {
+  .c-form__item {
+    flex-wrap: nowrap;
+  }
+  .c-form__label {
+    width: 40%;
+  }
+  .c-form__input {
+    width: 55%;
+  }
 }
 footer {
   background-color: #f9f5f1;
