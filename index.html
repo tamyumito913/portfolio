@@ -166,10 +166,22 @@
             </div>
             <div class="works_wrap">
                 <div class="works_img">
-                    <div class="slide"><img src="./2x/2x/works4@2x.png"></div>
-                    <div class="slide"><img src="./2x/2x/アセット 41@2x.png"></div>
-                    <div class="slide"><img src="./2x/2x/アセット 30@2x.png"></div>
-                    <div class="slide"><img src="./2x/2x/アセット 40@2x.png"></div>
+                    <div class="slide"><img src="./2x/2x/works4@2x.png">
+                        <h3>WEB SITE CODING</h3>
+                        <p>カフェHP[ DESIGN CAFE ](架空)</p>
+                    </div>
+                    <div class="slide"><img src="./2x/2x/アセット 41@2x.png">
+                        <h3>WEB SITE DESIGN</h3>
+                        <p>美容室LIFE hair design Webサイト]</p>
+                    </div>
+                    <div class="slide"><img src="./2x/2x/アセット 30@2x.png">
+                        <h3>WEB SITE CODING</h3>
+                        <p>カフェHP[ DESIGN CAFE ](架空)</p>
+                    </div>
+                    <div class="slide"><img src="./2x/2x/アセット 40@2x.png">
+                        <h3>WEB SITE CODING</h3>
+                        <p>カフェHP[ DESIGN CAFE ](架空)</p>
+                    </div>
                 </div>
             </div>
             <div class="btn_wrap">
@@ -183,14 +195,14 @@
         </div>
     </div>
     <div id="contact">
+        <img class="img1" src="./1x/1x/アセット 32.png" alt="" width="100%">
         <div class="contact">
-            <img class="img1" src="./1x/1x/アセット 32.png" alt="" width="100%">
             <div class="contact_title">
                 <p>お問い合わせ</p>
                 <h2>CONTACT</h2>
             </div>
             <div class="contact_object"></div>
-            <p>ご興味をお持ちいただき、ありがとうございます。<br>
+            <p class=" contact_text">ご興味をお持ちいただき、ありがとうございます。<br>
                 ご相談やお見積もりは無料ですのでお気軽にお問い合わせください。</p>
 
             <form
@@ -207,51 +219,52 @@
                         type="email" required="required" />
                 </div>
                 <div class="c-form__item">
-                    <label class="c-form__label" for="field-message">メッセージ内容</label>
+                    <label class="c-form__label" for="field-message">お問い合わせ内容</label>
                     <textarea name="entry.1172540745" class="c-form__input" id="field-message"
-                        placeholder="お問い合わせ内容"></textarea>
+                        placeholder="お問い合わせ内容をご記入ください。"></textarea>
                 </div>
                 <div class="c-form__submit">
-                    <button type="submit">送信する</button>
+                    <button type="submit">送信</button>
                 </div>
             </form>
         </div>
-        <footer>
-            <div class="logo"><img src="./2x/アセット 3@2x.png" alt=""></div>
-            <div class="footer_menu">
-                <ul>
-                    <li><a href="#">HOME</a></li>
-                    <li><a href="#about">ABOUT</a></li>
-                    <li><a href="#service">SERVICE</a></li>
-                    <li><a href="#works">WORKS</a></li>
-                </ul>
-                <a href="https://www.udd-website.com/"><img src="./2x/2x/2x/アセット 36@2x.png" alt="" width="1.3%"
-                        height="auto"></a>
-            </div>
-            <p class="copylight">&copy;2024 UPSY DAISY DESIGN</small>
-        </footer>
+    </div>
+    <footer>
+        <div class="logo"><img src="./2x/アセット 3@2x.png" alt=""></div>
+        <div class="footer_menu">
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#service">SERVICE</a></li>
+                <li><a href="#works">WORKS</a></li>
+            </ul>
+            <a href="https://www.udd-website.com/"><img src="./2x/2x/2x/アセット 36@2x.png" alt="" width="1.3%"
+                    height="auto"></a>
+        </div>
+        <p class="copylight">&copy;2024 UPSY DAISY DESIGN</small>
+    </footer>
 
-        <script>
-            $(function () {
-                $('.sp_btn').on('click', function () {
-                    $('.sp_nav').fadeToggle();
-                    $('.sp_btn').toggleClass('open')
-                })
-                $(".works_img").slick({
-                    autoplay: true,
-                    dots: true,
-
-                    arrows: true,
-                    variableWidth: true, //左右のスライドを見せるために必要
-                    centerMode: true, //スライドを中心に寄せる
-                    slidesToShow: 3 //スライドの見える枚数に合わせて入れると良い
-                });
+    <script>
+        $(function () {
+            $('.sp_btn').on('click', function () {
+                $('.sp_nav').fadeToggle();
+                $('.sp_btn').toggleClass('open')
             })
-            $(window).on('load', function () {
-                $("#splash").delay(1800).fadeOut('slow');//ローディング画面を1.5秒（1500ms）待機してからフェードアウト
-                $("#splash_logo").delay(1800).fadeOut('slow');//ロゴを1.2秒（1200ms）待機してからフェードアウト
+            $(".works_img").slick({
+                autoplay: true,
+                dots: true,
+
+                arrows: true,
+                variableWidth: true, //左右のスライドを見せるために必要
+                centerMode: true, //スライドを中心に寄せる
+                slidesToShow: 3 //スライドの見える枚数に合わせて入れると良い
             });
-        </script>
+        })
+        $(window).on('load', function () {
+            $("#splash").delay(1800).fadeOut('slow');//ローディング画面を1.5秒（1500ms）待機してからフェードアウト
+            $("#splash_logo").delay(1800).fadeOut('slow');//ロゴを1.2秒（1200ms）待機してからフェードアウト
+        });
+    </script>
 
 
 </body>

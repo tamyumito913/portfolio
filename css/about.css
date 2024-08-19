@@ -130,7 +130,7 @@ h1 {
 }
 .about_object {
   width: 833px;
-  height: 833px;
+  aspect-ratio: 1;
   border-radius: 50%;
   background-color: #f4e5e2;
   position: absolute;
@@ -143,6 +143,7 @@ h1 {
   margin: 15% auto;
   position: relative;
 }
+
 h2 {
   font-family: Palatino;
   font-weight: lighter;
@@ -171,9 +172,53 @@ h3 {
   margin-bottom: 4.5%;
 }
 .about_box img {
+  width: 40%;
+  height: auto;
   position: absolute;
   bottom: 5%;
   right: -20%;
+}
+@media screen and (max-width: 850px) {
+  .about_box {
+    max-width: 80%;
+    margin-top: 80%;
+  }
+
+  .about_profile {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10% 0;
+  }
+  .about_like {
+    display: flex;
+    flex-direction: column;
+  }
+  h1 {
+    font-size: 13vw;
+    top: 6%;
+  }
+  h2 {
+    margin: 20% 0 5% 0;
+    font-weight: bold;
+  }
+  h3 {
+    margin-bottom: 2%;
+  }
+  .about_object {
+    width: 108%;
+    aspect-ratio: 1;
+    right: 10%;
+  }
+  .about_box img {
+    position: static;
+    bottom: 0%;
+    right: 0%;
+    order: -1;
+    width: 100%;
+  }
+  .about_like p {
+    width: 100%;
+  }
 }
 
 .border {
