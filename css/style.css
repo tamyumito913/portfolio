@@ -53,27 +53,63 @@ h2 {
   font-weight: lighter;
   font-size: 6.25em;
 }
-ul {
+.pc_nav ul {
   display: flex;
   justify-content: end;
   gap: 25%;
+  align-items: center;
 }
-li {
+.pc_nav li {
   font-family: Palatino;
   font-weight: lighter;
+}
+.pc_nav ul li:last-child {
+  background-color: #ffd78d;
+  padding: 122px 71px 69px 41px;
+  border-radius: 50%;
 }
 .mainvisual {
   max-width: 100%;
   height: 100vh;
   position: relative;
 }
-.mainvisual .logo {
-  width: 300px;
-  aspect-ratio: 1;
+.mv_flex {
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+  align-items: center;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.mv_flex .logo {
+  width: 300px;
+  aspect-ratio: 1;
+}
+.animation p {
+  font-size: 20px;
+  line-height: 2;
+  width: 400px;
+}
+.blur {
+  animation-name: blurAnime;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes blurAnime {
+  from {
+    filter: blur(10px);
+    transform: scale(1.02);
+    opacity: 0;
+  }
+
+  to {
+    filter: blur(0);
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 /*.mainvisual {
@@ -95,7 +131,7 @@ li {
 .sp_btn {
   display: none;
 }
-.menu_object {
+/*.menu_object {
   width: 200px;
   aspect-ratio: 1;
   border-radius: 50%;
@@ -104,7 +140,7 @@ li {
   top: -57px;
   right: -35px;
   z-index: 99;
-}
+}*/
 .flame_top {
   font-family: Palatino;
   color: #77aaad;
@@ -163,8 +199,23 @@ li {
   top: 42%;
   right: 3.9%;
 }
+@media screen and (max-width: 970px) {
+  .mv_flex {
+    display: flex;
+    flex-direction: column;
+  }
+  .mv_flex .logo {
+    width: 60%;
+    aspect-ratio: 1;
+  }
+  .animation p {
+    font-size: 16px;
+    line-height: 2;
+    width: 282px;
+  }
+}
 @media screen and (max-width: 850px) {
-  .menu_object {
+  /*.menu_object {
     width: 24%;
     aspect-ratio: 1;
     border-radius: 50%;
@@ -173,7 +224,7 @@ li {
     top: -57px;
     right: -35px;
     z-index: 99;
-  }
+  }*/
   .pc_nav {
     display: none;
   }
@@ -182,10 +233,14 @@ li {
     display: block;
     height: 23px;
     cursor: pointer;
-    position: absolute;
-    top: 2.9%;
-    right: 5.3%;
+    position: fixed;
+    top: -57px;
+    right: -40px;
     z-index: 101;
+    width: 158px;
+    height: 158px;
+    background-color: #ffd78d;
+    border-radius: 50%;
   }
   .sp_btn span {
     display: block;
@@ -195,7 +250,8 @@ li {
     border-radius: 2px;
     /*位置の調整ー*/
     position: relative;
-    top: 20px;
+    top: 95px;
+    left: 45px;
     /*ボタンの変化*/
     transition: 0.3s;
   }
@@ -229,7 +285,7 @@ li {
     transform: rotate(-45deg);
   }
   .sp_nav {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     width: 80%;
@@ -273,6 +329,25 @@ li {
   position: absolute;
   top: -10%;
   right: 3.9%;
+  animation: fuwafuwa 3s ease-in-out infinite alternate;
+  background: url(../img/ico-apple.svg) no-repeat center center / 60px auto;
+  display: inline-block;
+  transition: 1.5s ease-in-out;
+  width: 9%;
+  height: auto;
+  margin-top: 15px;
+}
+
+@keyframes fuwafuwa {
+  0% {
+    transform: translate(0, 0) rotate(-7deg);
+  }
+  50% {
+    transform: translate(0, -7px) rotate(0deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(7deg);
+  }
 }
 .white_kumo {
   position: absolute;
@@ -308,11 +383,41 @@ li {
   position: absolute;
   left: 20%;
   top: 20%;
+  animation: fuwafuwa 3s ease-in-out infinite alternate;
+  background: url(../img/ico-apple.svg) no-repeat center center / 60px auto;
+  display: inline-block;
+  transition: 1.5s ease-in-out;
+}
+@keyframes fuwafuwa {
+  0% {
+    transform: translate(0, 0) rotate(-7deg);
+  }
+  50% {
+    transform: translate(0, -7px) rotate(0deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(7deg);
+  }
 }
 #concept .leaf_concept_bg {
   position: absolute;
   right: 5%;
   top: 80%;
+  animation: fuwafuwa 3s ease-in-out infinite alternate;
+  background: url(../img/ico-apple.svg) no-repeat center center / 60px auto;
+  display: inline-block;
+  transition: 1.5s ease-in-out;
+}
+@keyframes fuwafuwa {
+  0% {
+    transform: translate(0, 0) rotate(7deg);
+  }
+  50% {
+    transform: translate(0, -7px) rotate(0deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(-7deg);
+  }
 }
 
 .fadein {
@@ -565,6 +670,13 @@ a.btn--circle:hover i {
     top: 28%;
     right: 2%;
   }
+  a.btn--circle {
+    width: 75px;
+    height: 75px;
+    padding: 0;
+    background: #77aaad;
+    border-radius: 50%;
+  }
 }
 
 #service {
@@ -685,7 +797,7 @@ a.btn--circle:hover i {
     border-radius: 50%;
     background-color: #fff;
     position: absolute;
-    top: 4%;
+    top: 3%;
     right: -2.6%;
     z-index: -1;
   }
@@ -701,7 +813,7 @@ a.btn--circle:hover i {
     margin: 33px auto !important;
   }
   .service_title {
-    top: 6%;
+    top: 4%;
   }
   .service_title h2 {
     font-size: 11vw;
@@ -845,8 +957,7 @@ a.btn--circle:hover i {
     background: #ffd78d;
   }
 }
-
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1070px) {
   .worksbg_object .white_kumo {
     position: absolute;
     top: -35%;
@@ -855,6 +966,19 @@ a.btn--circle:hover i {
   .worksbg_object .img_kumo {
     position: absolute;
     top: -30%;
+    z-index: -1;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .worksbg_object .white_kumo {
+    position: absolute;
+    top: -25%;
+    z-index: -2;
+  }
+  .worksbg_object .img_kumo {
+    position: absolute;
+    top: -20%;
     z-index: -1;
   }
 }
@@ -890,6 +1014,21 @@ a.btn--circle:hover i {
   }
   .works_wrap {
     padding-top: 40%;
+  }
+  .slick-dots li button:before {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 6px;
+    background-color: #fff;
+    opacity: 1;
+  }
+  .slick-dots li {
+    margin: 0 12px;
+  }
+  .flower_works_bg {
+    top: 90%;
+    left: 5%;
   }
 }
 #contact {
@@ -1073,7 +1212,7 @@ footer {
   background-color: #f9f5f1;
   position: relative;
 }
-.logo {
+footer .logo img {
   width: 11%;
   aspect-ratio: 1;
   position: absolute;
@@ -1097,6 +1236,8 @@ footer {
   display: block;
   margin: 0 auto;
   padding-bottom: 6%;
+  width: 1.3%;
+  height: auto;
 }
 small {
   font-size: 11px;
@@ -1109,4 +1250,33 @@ small {
   font-size: 11px;
   text-align: center;
   padding-bottom: 3%;
+}
+@media screen and (max-width: 767px) {
+  footer .logo img {
+    display: block;
+    position: initial;
+    width: 150px;
+    aspect-ratio: 1;
+    padding-top: 30px;
+    margin: 0 auto;
+  }
+
+  .footer_menu ul {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+  }
+  .footer_menu li {
+    font-family: Palatino;
+    font-weight: lighter;
+    font-size: 30px;
+    line-height: 3em;
+  }
+  .footer_menu img {
+    display: block;
+    margin-left: 10%;
+    padding-bottom: 6%;
+    width: 36px;
+    height: auto;
+  }
 }

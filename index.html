@@ -16,6 +16,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXv
     ZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -31,7 +32,7 @@
                 <li><a href="#about">ABOUT</a></li>
                 <li><a href="#service">SERVICE</a></li>
                 <li><a href="#works">WORKS</a></li>
-                <li><a href="contact.html">CONTACT</a></li>
+                <li class="pc-nav-contact"><a href="contact.html">CONTACT</a></li>
             </ul>
         </nav>
         <div class="sp_btn">
@@ -47,7 +48,14 @@
             </ul>
         </nav>
         <div class="menu_object"></div>
-        <img class="logo" src="./2x/アセット 3@2x.png" alt="">
+        <div class="mv_flex">
+            <div class="logo"><img src="./2x/アセット 3@2x.png" alt=""></div>
+            <div class="animation">
+                <p>UPSY DAISY(アプシーデイジー)は
+                    「せーの！」や「えいっ！」など、立ち上がる時に使う前向きな表現です。<br>
+                    デザインの力でポジティブな変化を生み、最良の結果をと共に目指すという想いが込められています</p>
+            </div>
+        </div>
         <p class="flame_top">Flower ideas,</p>
         <p class="flame_top2">blooming designs</p>
         <p class="flame_bottom">WebDesigner</p>
@@ -56,7 +64,7 @@
 
     </div>
     <div class="kumo-img">
-        <img class="flower_fv_bg" src="./2x/2x/scuNHo (2)@2x.png" alt="花" width="9%" height="11%">
+        <img class="flower_fv_bg" src="./2x/2x/scuNHo (2)@2x.png" alt="花">
         <img class="white_kumo" src="./1x/mokumoku.png" alt="" width="100%">
         <img class="img_kumo" src="./1x/bg_kumo.png" alt="" width="100%">
     </div>
@@ -238,8 +246,7 @@
                 <li><a href="#service">SERVICE</a></li>
                 <li><a href="#works">WORKS</a></li>
             </ul>
-            <a href="https://www.udd-website.com/"><img src="./2x/2x/2x/アセット 36@2x.png" alt="" width="1.3%"
-                    height="auto"></a>
+            <a href="https://www.udd-website.com/"><img src="./2x/2x/2x/アセット 36@2x.png" alt=""> </a>
         </div>
         <p class="copylight">&copy;2024 UPSY DAISY DESIGN</small>
     </footer>
@@ -261,9 +268,10 @@
             });
         })
         $(window).on('load', function () {
-            $("#splash").delay(1800).fadeOut('slow');//ローディング画面を1.5秒（1500ms）待機してからフェードアウト
-            $("#splash_logo").delay(1800).fadeOut('slow');//ロゴを1.2秒（1200ms）待機してからフェードアウト
+            $("#splash").delay(2500).fadeOut('slow');//ローディング画面を1.5秒（1500ms）待機してからフェードアウト
+            $("#splash_logo").delay(2500).fadeOut('slow');//ロゴを1.2秒（1200ms）待機してからフェードアウト
         });
+
     </script>
 
 
