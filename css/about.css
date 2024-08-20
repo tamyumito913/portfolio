@@ -140,7 +140,7 @@ h1 {
 }
 .about_box {
   max-width: 66%;
-  margin: 15% auto;
+  margin: 15% auto 10% auto;
   position: relative;
 }
 
@@ -220,39 +220,37 @@ h3 {
     width: 100%;
   }
 }
-
-.border {
+.line {
+  align-items: center;
+  border-bottom: solid 1px#826b63;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 5px;
   position: relative;
-  margin: 10% auto;
-}
-hr {
   max-width: 51%;
   margin: 0 auto;
-  border-width: 1px 0 0 0; /*線の太さの指定*/
-  border-style: solid;
-  /*線の種類の指定*/
-  border-color: #826b63; /*線の色の指定*/
 }
-.dot_left {
-  width: 0.01%;
-  aspect-ratio: 1;
+.line::after,
+.line::before {
+  content: "";
+  background: #826b63;
   border-radius: 50%;
-  background-color: #826b63;
+  height: 5px;
+  width: 5px;
+  bottom: -3px;
   position: absolute;
-  left: 24%;
+}
+.line::after {
+  right: -2px;
+}
+.line::before {
+  left: 0;
+}
 
-  padding: 10px;
-}
-.dot_right {
-  width: 1px;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background-color: #826b63;
-  position: absolute;
-  right: 24%;
-}
 .contact {
   text-align: center;
+  padding-top: 15%;
 }
 .contact strong {
   display: block;

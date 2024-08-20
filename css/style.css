@@ -63,11 +63,7 @@ h2 {
   font-family: Palatino;
   font-weight: lighter;
 }
-.pc_nav ul li:last-child {
-  background-color: #ffd78d;
-  padding: 122px 71px 69px 41px;
-  border-radius: 50%;
-}
+
 .mainvisual {
   max-width: 100%;
   height: 100vh;
