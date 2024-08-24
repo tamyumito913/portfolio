@@ -211,16 +211,16 @@ h2 {
   }
 }
 @media screen and (max-width: 850px) {
-  /*.menu_object {
-    width: 24%;
+  .menu_object {
+    width: 158px;
     aspect-ratio: 1;
     border-radius: 50%;
     background-color: #ffd78d;
     position: fixed;
-    top: -57px;
-    right: -35px;
+    top: -55px;
+    right: -33px;
     z-index: 99;
-  }*/
+  }
   .pc_nav {
     display: none;
   }
@@ -304,18 +304,7 @@ h2 {
     font-family: Palatino;
   }
 }
-@media screen and (max-width: 660px) {
-  .menu_object {
-    width: 158px;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    background-color: #ffd78d;
-    position: fixed;
-    top: -55px;
-    right: -33px;
-    z-index: 99;
-  }
-}
+
 .kumo-img {
   max-width: 100%;
   position: relative;
@@ -880,19 +869,28 @@ a.btn--circle:hover i {
   align-items: flex-end;
   transform: scale(0.5);
   transition: transform 0.3s;
+  transform-origin: center bottom;
 }
 .slide h3 {
   font-family: Palatino;
   font-weight: lighter;
   font-size: 38px;
   text-align: center;
-  letter-spacing: 0.5em;
+  letter-spacing: 0.3em;
   text-indent: 0.5em;
   margin-bottom: 20px;
+  display: none;
 }
 .slide p {
   font-size: 25px;
   text-align: center;
+  display: none;
+}
+.slide.slick-center h3 {
+  display: block;
+}
+.slide.slick-center p {
+  display: block;
 }
 .slick-slide img {
   margin-bottom: 70px;
@@ -907,6 +905,12 @@ a.btn--circle:hover i {
   left: 22%;
   z-index: 99;
 }
+.slick-prev {
+  background-color: #ffd78d;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
 .slick-prev:before {
   content: "";
   display: block;
@@ -920,6 +924,10 @@ a.btn--circle:hover i {
   top: 80%;
   right: 22%;
   z-index: 99;
+  background-color: #ffd78d;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
 }
 .slick-next:before {
   content: "";
@@ -930,13 +938,16 @@ a.btn--circle:hover i {
   border-right: 5px solid #fff;
   transform: rotate(45deg);
 }
+
 .slick-dots li button:before {
-  content: "";
-  display: block;
+  background-color: #fff;
   width: 100px;
   height: 10px;
-  background-color: #fff;
-  opacity: 1;
+  display: block;
+  content: "";
+}
+.slick-dots li button{
+  padding: 0;
 }
 .slick-dots {
   bottom: -70px;

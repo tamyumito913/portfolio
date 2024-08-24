@@ -7,12 +7,14 @@
     <title>制作実績</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/works.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
 <body>
     <div class="works">
         <h1>WORKS</h1>
-        <div class="menu">
+        <nav class="pc_nav">
             <ul>
                 <li><a href="index.html">HOME</a></li>
                 <li><a href="about.html">ABOUT</a></li>
@@ -20,7 +22,20 @@
                 <li><a href="works.html">WORKS</a></li>
                 <li><a href="contact.html">CONTACT</a></li>
             </ul>
+        </nav>
+        <div class="sp_btn">
+            <span></span>
         </div>
+        <nav class="sp_nav">
+            <ul>
+
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="index.html">SERVICE</a></li>
+                <li><a href="works.html">WORKS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
         <div class="menu_object"></div>
         <div class="works_object"></div>
         <div class="works_box">
@@ -52,7 +67,7 @@
         <strong>CONTACT</strong>
         <p class="contact_text">制作に関するご相談や疑問などありましたらお気軽にお問い合わせください。</p>
         <p class="btn btn-triangle-right">
-            <a href="./contact.html">お問い合わせフォームはこちら</a>
+            <a href="./contact.html">お問い合わせはコチラ</a>
         </p>
     </div>
     <footer>
@@ -69,6 +84,21 @@
         </div>
         <p class="copylight">&copy;2024 UPSY DAISY DESIGN</small>
     </footer>
+    <script>
+        $(function () {
+            $('.sp_btn').on('click', function () {
+                $('.sp_nav').fadeToggle();
+                $('.sp_btn').toggleClass('open')
+            })
+
+
+
+        })
+
+
+
+
+    </script>
 
 </body>
 

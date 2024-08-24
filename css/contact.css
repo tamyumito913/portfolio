@@ -28,20 +28,20 @@ h1 {
   font-family: Palatino;
   font-weight: lighter;
 }
-.contact .menu {
+.pc_nav {
   position: fixed;
   top: 7%;
   right: 3%;
   z-index: 100;
 }
 .menu_object {
-  width: 14.6%;
+  width: 158px;
   aspect-ratio: 1;
   border-radius: 50%;
   background-color: #ffd78d;
   position: fixed;
-  top: -10%;
-  right: -3%;
+  top: -55px;
+  right: -33px;
   z-index: 99;
 }
 .contact_object {
@@ -54,6 +54,95 @@ h1 {
   left: -144px;
   z-index: -1;
 }
+.sp_nav,
+.sp_btn {
+  display: none;
+}
+@media screen and (max-width: 850px) {
+  .pc_nav {
+    display: none;
+  }
+  /*ハンバーガー*/
+  .sp_btn {
+    display: block;
+    height: 23px;
+    cursor: pointer;
+    position: fixed;
+    top: -57px;
+    right: -40px;
+    z-index: 101;
+    width: 158px;
+    height: 158px;
+    background-color: #ffd78d;
+    border-radius: 50%;
+  }
+  .sp_btn span {
+    display: block;
+    width: 33px;
+    height: 3px;
+    background-color: #826b63;
+    border-radius: 2px;
+    /*位置の調整ー*/
+    position: relative;
+    top: 95px;
+    left: 45px;
+    /*ボタンの変化*/
+    transition: 0.3s;
+  }
+  .sp_btn span::before,
+  .sp_btn span::after {
+    content: "";
+    display: block;
+    width: 33px;
+    height: 3px;
+    background-color: #826b63;
+    border-radius: 2px;
+    position: absolute;
+    transition: 0.3s;
+  }
+  .sp_btn span::before {
+    bottom: 10px;
+  }
+  .sp_btn span::after {
+    top: 10px;
+  }
+  /*ばつ印*/
+  .sp_btn.open span {
+    background: transparent;
+  }
+  .sp_btn.open span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+  }
+  .sp_btn.open span::after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+  .sp_nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 80%;
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+    z-index: 100;
+  }
+  .sp_nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20%;
+    align-items: flex-start;
+    height: 50%;
+    padding: 35% 0 0 30%;
+  }
+  .sp_nav ul li {
+    color: #826b63;
+    font-size: 30px;
+    font-family: Palatino;
+  }
+}
+
 .contact_box {
   max-width: 100%;
   margin: 15% auto;
@@ -203,19 +292,20 @@ footer {
   background-color: #f9f5f1;
   position: relative;
 }
-.logo {
+footer .logo img {
   width: 11%;
   aspect-ratio: 1;
   position: absolute;
   top: 25%;
-  left: 12%;
+  left: 10%;
 }
 .footer_menu ul {
-  max-width: 18%;
+  max-width: 100%;
   display: flex;
   justify-content: space-between;
-  margin: 0 auto;
+  margin: 0 30%;
   padding: 10% 0 3% 0;
+  gap: 0;
 }
 .footer_menu li {
   font-family: Palatino;
@@ -226,6 +316,8 @@ footer {
   display: block;
   margin: 0 auto;
   padding-bottom: 6%;
+  width: 1.3%;
+  height: auto;
 }
 small {
   font-size: 11px;
@@ -238,4 +330,33 @@ small {
   font-size: 11px;
   text-align: center;
   padding-bottom: 3%;
+}
+@media screen and (max-width: 767px) {
+  footer .logo img {
+    display: block;
+    position: initial;
+    width: 150px;
+    aspect-ratio: 1;
+    padding-top: 30px;
+    margin: 0 auto;
+  }
+
+  .footer_menu ul {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+  }
+  .footer_menu li {
+    font-family: Palatino;
+    font-weight: lighter;
+    font-size: 30px;
+    line-height: 3em;
+  }
+  .footer_menu img {
+    display: block;
+    margin-left: 10%;
+    padding-bottom: 6%;
+    width: 36px;
+    height: auto;
+  }
 }
