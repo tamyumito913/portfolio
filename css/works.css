@@ -389,6 +389,13 @@ small {
   text-align: center;
   padding-bottom: 3%;
 }
+@media screen and (max-width: 850px) {
+  .works_object {
+    width: 108%;
+
+    right: 10%;
+  }
+}
 @media screen and (max-width: 767px) {
   footer .logo img {
     display: block;

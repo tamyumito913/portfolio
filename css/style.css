@@ -338,6 +338,13 @@ h2 {
   position: absolute;
   bottom: -15%;
 }
+@media screen and (max-width: 767px) {
+  .kumo-img .flower_fv_bg {
+    width: 12%;
+    height: auto;
+  }
+}
+
 #concept {
   background-color: #fff;
   position: relative;
@@ -372,6 +379,8 @@ h2 {
   background: url(../img/ico-apple.svg) no-repeat center center / 60px auto;
   display: inline-block;
   transition: 1.5s ease-in-out;
+  width: 9.4%;
+  height: auto;
 }
 @keyframes fuwafuwa {
   0% {
@@ -392,6 +401,8 @@ h2 {
   background: url(../img/ico-apple.svg) no-repeat center center / 60px auto;
   display: inline-block;
   transition: 1.5s ease-in-out;
+  width: 8.4%;
+  height: auto;
 }
 @keyframes fuwafuwa {
   0% {
@@ -440,6 +451,16 @@ h2 {
   }
   .concept_text p {
     font-size: 6.1vw;
+  }
+  #concept .flower_concept_bg {
+    width: 14%;
+    height: auto;
+    left: 10%;
+    top: 10%;
+  }
+  #concept .leaf_concept_bg {
+    width: 13%;
+    height: auto;
   }
 }
 #about {
@@ -525,6 +546,8 @@ h2 {
   position: absolute;
   right: 3.6%;
   bottom: 0;
+  width: 12%;
+  height: auto;
 }
 a.btn--circle {
   width: 100px;
@@ -662,6 +685,9 @@ a.btn--circle:hover i {
     background: #77aaad;
     border-radius: 50%;
   }
+  .flower_about_bg {
+    width: 20%;
+  }
 }
 
 #service {
@@ -675,11 +701,15 @@ a.btn--circle:hover i {
   position: absolute;
   top: 9.4%;
   left: 9.4%;
+  width: 8.4%;
+  height: auto;
 }
 .flower_service_bg {
   position: absolute;
   top: 70%;
   left: 25%;
+  width: 10%;
+  height: auto;
 }
 .service_title {
   position: absolute;
@@ -809,6 +839,16 @@ a.btn--circle:hover i {
   .service_frex h3 {
     font-size: 10.4vw;
   }
+  .leaf_service_bg {
+    top: 6%;
+    left: 6%;
+    width: 16%;
+  }
+  .flower_service_bg {
+    width: 15%;
+    top: 90%;
+    left: 10%;
+  }
 }
 
 .service_detail_flame {
@@ -896,8 +936,13 @@ a.btn--circle:hover i {
   margin-bottom: 70px;
 }
 
+.slide.slick-center {
+  max-width: 48%;
+}
 .slide.slick-center img {
   transform: scale(1);
+  width: 100%;
+  aspect-ratio: 1;
 }
 
 .slick-prev {
@@ -916,9 +961,10 @@ a.btn--circle:hover i {
   display: block;
   width: 10px;
   height: 10px;
-  border-top: 5px solid #fff;
-  border-left: 5px solid #fff;
+  border-top: 2px solid #fff;
+  border-left: 2px solid #fff;
   transform: rotate(-45deg);
+  translate: 100%;
 }
 .slick-next {
   top: 80%;
@@ -934,9 +980,10 @@ a.btn--circle:hover i {
   display: block;
   width: 10px;
   height: 10px;
-  border-top: 5px solid #fff;
-  border-right: 5px solid #fff;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
   transform: rotate(45deg);
+  translate: 100%;
 }
 
 .slick-dots li button:before {
@@ -946,7 +993,7 @@ a.btn--circle:hover i {
   display: block;
   content: "";
 }
-.slick-dots li button{
+.slick-dots li button {
   padding: 0;
 }
 .slick-dots {
@@ -1022,6 +1069,16 @@ a.btn--circle:hover i {
   .works_wrap {
     padding-top: 40%;
   }
+  .slick-prev {
+    top: 40%;
+    left: 5%;
+  }
+
+  .slick-next {
+    top: 40%;
+    right: 5%;
+  }
+
   .slick-dots li button:before {
     content: "";
     display: block;
