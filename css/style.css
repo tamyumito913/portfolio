@@ -502,45 +502,42 @@ h2 {
 .about_wrap {
   max-width: 100%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
 }
 .about_text {
-  position: relative;
-  z-index: 3;
   width: 44%;
+  height: auto;
   aspect-ratio: 1;
   border-radius: 50%;
   background-color: #f4e5e2;
-  text-align: right;
-  margin-right: 17%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  position: relative;
 }
 
 .about_text p {
-  position: absolute;
-  left: 12%;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-  width: 75%;
+  width: 80%;
+  margin: 0;
+  line-height: 1.5;
   text-align: left;
-  font-size: 17px;
-  line-height: 2rem;
 }
-.about_wrap .about_img {
-  position: absolute;
-  width: 53%;
 
+.about_text .about_img {
+  position: absolute;
+  width: 100%;
+  scale: 1.25;
   z-index: 1;
-  top: -1%;
-  right: 13%;
 }
 .about_wrap .about_img2 {
-  width: 300px;
+  width: 25%;
   aspect-ratio: 1;
   position: absolute;
   z-index: 2;
-  top: 35%;
-  right: 57%;
+  top: 40%;
+  right: 60%;
 }
 .flower_about_bg {
   position: absolute;
@@ -588,30 +585,17 @@ a.btn--circle:hover i {
 }
 @media screen and (max-width: 1366px) {
   .about_text {
-    position: relative;
-    z-index: 3;
     width: 600px;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    background-color: #f4e5e2;
-    text-align: right;
-    margin-right: 17%;
   }
   .about_wrap .about_img {
-    position: absolute;
     width: 716px;
-    z-index: 1;
-    top: -1%;
-    right: 13%;
+    height: auto;
   }
-}
-@media screen and (max-width: 1200px) {
   .about_wrap .about_img2 {
-    top: 43%;
-    right: 47%;
-    z-index: 3;
+    width: 350px;
   }
 }
+
 @media screen and (max-width: 1000px) {
   .about_wrap {
     padding-top: 20%;
@@ -620,14 +604,14 @@ a.btn--circle:hover i {
     position: absolute;
     width: 716px;
     z-index: 1;
-    top: 15%;
-    right: 13%;
   }
   .about_wrap .about_img2 {
+    width: 250px;
     top: 50%;
     right: 20%;
   }
 }
+
 @media screen and (max-width: 767px) {
   .about_title h2 {
     font-size: 11vw;
@@ -650,34 +634,29 @@ a.btn--circle:hover i {
     left: 3%;
   }
   .about_wrap .about_img2 {
-    width: 49%;
+    width: 50%;
     aspect-ratio: 1;
     position: absolute;
     z-index: 3;
     top: 60%;
     right: 0%;
   }
-  .about_text {
-    position: relative;
-    z-index: 3;
-    width: 600px;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    background-color: #f4e5e2;
-    text-align: right;
-    margin: 50% 0 20% 0;
-  }
+
   .about_wrap {
     justify-content: center;
     margin: 0 auto;
+    overflow: hidden;
+    padding: 50% 0 20% 0;
   }
-  .about_wrap .about_img {
-    position: absolute;
-    width: 716px;
-    z-index: 1;
-    top: 28%;
-    right: 2%;
+  .about_text {
+    scale: 1.25;
+    margin-top: 20%;
   }
+  .about_text p {
+    font-size: 16px;
+    width: 70%;
+  }
+
   a.btn--circle {
     width: 75px;
     height: 75px;
@@ -689,7 +668,14 @@ a.btn--circle:hover i {
     width: 20%;
   }
 }
-
+@media screen and (max-width: 400px) {
+  .about_text p {
+    font-size: 4vw;
+  }
+  .about_wrap .about_img2 {
+    width: 4vw;
+  }
+}
 #service {
   max-width: 100%;
 }
@@ -999,9 +985,16 @@ a.btn--circle:hover i {
 .slick-dots {
   bottom: -70px;
 }
-.slick-dots li {
-  margin: 0 50px;
+.slick-dots li button {
+  width: 100px;
+  height: 10px;
 }
+.slick-dots li {
+  width: 100px;
+  height: 10px;
+  margin: 0 5px;
+}
+
 .slick-dots li.slick-active button:before {
   background-color: #ffd78d;
   overflow: 1;

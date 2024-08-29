@@ -46,7 +46,7 @@ h1 {
 }
 .contact_object {
   width: 833px;
-  height: 833px;
+  aspect-ratio: 1;
   border-radius: 50%;
   background-color: #f9f5f1;
   position: absolute;

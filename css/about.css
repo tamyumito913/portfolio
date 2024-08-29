@@ -235,7 +235,7 @@ h3 {
   padding-bottom: 5px;
   position: relative;
   max-width: 51%;
-  margin: 0 auto;
+  margin: 0 auto 15% auto;
 }
 .line::after,
 .line::before {
@@ -256,7 +256,6 @@ h3 {
 
 .contact {
   text-align: center;
-  padding-top: 15%;
 }
 .contact strong {
   display: block;
@@ -347,6 +346,10 @@ small {
   padding-bottom: 3%;
 }
 @media screen and (max-width: 767px) {
+  .line {
+    margin: 15% auto 15% auto;
+    max-width: 70%;
+  }
   footer .logo img {
     display: block;
     position: initial;
