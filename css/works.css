@@ -158,10 +158,24 @@ h1 {
   height: auto;
   margin-bottom: 3.4%;
   box-shadow: 5px 5px 5px #af6e058f;
+  position: relative;
+  cursor: pointer;
 }
 .works_box .modal-botton img {
   width: 100%;
   height: auto;
+}
+.works_box .modal-botton .hover {
+  width: 100%;
+  height: auto;
+  background-color: white;
+  opacity: 0.9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Palatino;
+  font-weight: lighter;
+  font-size: 24px;
 }
 /* モーダル */
 .modal-overlay {
