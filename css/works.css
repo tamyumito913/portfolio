@@ -165,18 +165,24 @@ h1 {
   width: 100%;
   height: auto;
 }
-.works_box .modal-botton .hover {
+.works_box .modal-botton:hover .hover {
   width: 100%;
-  height: auto;
-  background-color: white;
+  height: 100%;
+  background-color: #fff;
   opacity: 0.9;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: Palatino;
   font-weight: lighter;
-  font-size: 24px;
+  font-size: 16px;
+  position: absolute;
+  top: 0;
 }
+p.hover {
+  display: none;
+}
+
 /* モーダル */
 .modal-overlay {
   align-items: flex-start;
@@ -418,6 +424,7 @@ h1 {
 
 .micromodal-slide.is-open {
   display: block;
+  position: absolute;
 }
 
 .micromodal-slide[aria-hidden="false"] .modal-overlay {
@@ -496,6 +503,12 @@ h1 {
   .modal-container button {
     width: 80px;
     height: 80px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .modal-container {
+    max-width: 80%;
+    margin-top: 15%;
   }
 }
 .line {
@@ -588,6 +601,12 @@ h1 {
     width: 300px;
   }
 }
+@media screen and (max-width: 400px) {
+  .modal-container .contact .contact_text {
+    max-width: 80%;
+    margin-bottom: 40%;
+  }
+}
 footer {
   background-color: #f9f5f1;
   position: relative;
@@ -644,7 +663,7 @@ small {
     position: initial;
     width: 150px;
     aspect-ratio: 1;
-    padding-top: 30px;
+    padding-top: 70px;
     margin: 0 auto;
   }
 

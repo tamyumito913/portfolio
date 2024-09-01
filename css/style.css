@@ -673,7 +673,8 @@ a.btn--circle:hover i {
     font-size: 4vw;
   }
   .about_wrap .about_img2 {
-    width: 4vw;
+    width: 50vw;
+    top: 57%;
   }
 }
 #service {
@@ -1314,7 +1315,7 @@ small {
     position: initial;
     width: 150px;
     aspect-ratio: 1;
-    padding-top: 30px;
+    padding-top: 70px;
     margin: 0 auto;
   }
 
