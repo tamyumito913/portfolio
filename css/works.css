@@ -263,12 +263,17 @@ p.hover {
 .modal-text {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: flex-start;
   margin-bottom: 2rem;
 }
+.modal-text h4 {
+  margin: 4px 0 0 0;
+}
+.modal-text .flex {
+  width: 77%;
+}
 .modal-text p {
-  display: block;
-  max-width: 77%;
+  display: inline-block;
   line-height: 2;
 }
 .modal-content img {
@@ -491,6 +496,10 @@ p.hover {
     display: flex;
     flex-direction: column;
   }
+  .modal-text .flex {
+    width: 100%;
+  }
+
   .modal-text p {
     max-width: 100%;
   }

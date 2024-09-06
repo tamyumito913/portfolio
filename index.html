@@ -64,7 +64,7 @@
     </div>
     <div class="kumo-img">
         <img class="flower_fv_bg" src="./2x/2x/scuNHo (2)@2x.png" alt="花">
-        <img class="white_kumo" src="./1x/mokumoku.png" alt="" width="100%">
+        <img class="white_kumo cloud" src="./1x/mokumoku.png" alt="" width="100%">
         <img class="img_kumo" src="./1x/bg_kumo.png" alt="" width="100%">
     </div>
     </div>
@@ -124,7 +124,7 @@
             </div>
             <div class="service_object"></div>
             <div class="service_wrap">
-                <div class=" service_frex">
+                <div class="service_frex anim-box1">
 
                     <div class="service_detail_flame">
                         <img class="img1" src="./2x/webdesign@2x.png" alt="パソコンのイラスト">
@@ -135,7 +135,7 @@
                     <p>お客さまの要望やらしさを引き出すヒアリングをするところから、イメージを明確にしていきデザインを作成いたします。目的の達成や課題解決ができるように、寄り添ったサービスをご提供いたします。
                     </p>
                 </div>
-                <div class=" service_frex" style="margin-top:200px;">
+                <div class="service_frex anim-box2" style="margin-top:200px;">
 
                     <div class="service_detail_flame">
                         <img class="img2" src="./2x/coding@2x.png" alt="コーディングのイラスト">
@@ -146,7 +146,7 @@
                     <p>パソコンからスマートフォンまで対応したレスポンシブルなサイト、Javascriptを使用した動きのあるサイトを作成します。デザインの意図を考慮してコーディングをすることでお客様の思いやサービスを反映します。
                     </p>
                 </div>
-                <div class=" service_frex" style="margin-top:400px;">
+                <div class="service_frex anim-box3" style="margin-top:400px;">
                     <div class="service_detail_flame">
                         <img class="img3" src="./2x/graphic@2x.png" alt="グラフィックのイラスト">
                         <h3 class="h3_3">Graphic</h3>
@@ -266,7 +266,7 @@
                 arrows: true,
                 variableWidth: true, //左右のスライドを見せるために必要
                 centerMode: true, //スライドを中心に寄せる
-                slidesToShow: 3 //スライドの見える枚数に合わせて入れると良い
+                slidesToShow: 3, //スライドの見える枚数に合わせて入れると良い
                 responsive: [
                     {
                         breakpoint: 767,
@@ -278,8 +278,16 @@
                         }
                     }
                 ]
-
-
+            });
+            // 平垣内追加部分
+            var cloud = $('.cloud'); //雲にcloudクラスを追加して取得
+            $(window).on('load scroll', function () {
+                var scroll = $(this).scrollTop() + $(window).height() // ページの下のラインでスクロール量を取得
+                if (scroll > cloud.offset().top - 100) { // 雲の位置までスクロールした時（-100で雲が出現する位置を調整）
+                    cloud.addClass('active');
+                } else {
+                    cloud.removeClass('active');
+                }
             });
         })
     </script>

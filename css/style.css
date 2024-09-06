@@ -428,13 +428,13 @@ h2 {
 
 /*以下遅延の指定*/
 .txt01 {
-  animation-delay: 1s;
+  animation-delay: 1.5s;
 }
 .txt02 {
-  animation-delay: 3s;
+  animation-delay: 4.5s;
 }
 .txt03 {
-  animation-delay: 5s;
+  animation-delay: 7.5s;
 }
 @media screen and (max-width: 767px) {
   .concept_title {
@@ -733,6 +733,7 @@ a.btn--circle:hover i {
   width: 88%;
   margin: 0 auto 20% auto;
 }
+
 .service_detail_flame {
   width: 82%;
   aspect-ratio: 0.75;
@@ -1337,4 +1338,12 @@ small {
     width: 36px;
     height: auto;
   }
+}
+/*** 平垣内追加部分 ***/
+.cloud {
+  transform: translateY(40%);
+  transition: 0.5s;
+}
+.cloud.active {
+  transform: translate(0);
 }
