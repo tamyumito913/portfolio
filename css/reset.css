@@ -47,3 +47,6 @@ img {
   vertical-align: bottom;
   border: none;
 }
+::placeholder {
+  color: #cccccc;
+}

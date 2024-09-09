@@ -20,7 +20,8 @@
                 <li><a href="about.html">ABOUT</a></li>
                 <li><a href="index.html">SERVICE</a></li>
                 <li><a href="works.html">WORKS</a></li>
-                <li><a href="contact.html">CONTACT</a></li>
+                <li class="pc-nav-contact"><a href="contact.html">CONTACT</a></li>
+
             </ul>
         </nav>
         <div class="sp_btn">
@@ -44,7 +45,8 @@
 
             <form
                 action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeN-JDI9h2f4iCj2BmQoQ9cil85ayyzvDhXlcJKcDwGcRrSqg/formResponse"
-                method="post" class="c-form">
+                method="post" target="hidden_iframe" onsubmit="submitted=true;" class="c-form">
+
                 <div class="c-form__item">
                     <label class="c-form__label" for="field-name">氏名<span class="c-form__required">必須</span></label>
                     <input name="entry.666281235" class="c-form__input" id="field-name" placeholder="山田 太郎" type="text"
@@ -90,11 +92,12 @@
 
 
             })
-
-
-
-
         </script>
+        <script type="text/javascript">
+            let submitted = false;
+        </script>
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display: none"
+            onload="if(submitted){window.location='thanks.html';}"></iframe>
 </body>
 
 </html>

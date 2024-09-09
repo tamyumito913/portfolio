@@ -63,7 +63,21 @@ h2 {
   font-family: Palatino;
   font-weight: lighter;
 }
-
+.pc-nav-contact {
+  position: relative;
+}
+.pc-nav-contact::before {
+  content: "";
+  display: block;
+  width: 200px;
+  height: 200px;
+  background-color: #ffd78d;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -60px;
+  left: -50px;
+  z-index: -1;
+}
 .mainvisual {
   max-width: 100%;
   height: 100vh;
@@ -322,18 +336,6 @@ h2 {
   height: auto;
   margin-top: 15px;
 }
-
-@keyframes fuwafuwa {
-  0% {
-    transform: translate(0, 0) rotate(-7deg);
-  }
-  50% {
-    transform: translate(0, -7px) rotate(0deg);
-  }
-  100% {
-    transform: translate(0, 0) rotate(7deg);
-  }
-}
 .white_kumo {
   position: absolute;
   bottom: -15%;
@@ -375,29 +377,19 @@ h2 {
   position: absolute;
   left: 20%;
   top: 20%;
-  animation: fuwafuwa 3s ease-in-out infinite alternate;
+  animation: fuwafuwa 4s ease-in-out infinite alternate;
   background: url(../img/ico-apple.svg) no-repeat center center / 60px auto;
   display: inline-block;
   transition: 1.5s ease-in-out;
   width: 9.4%;
   height: auto;
 }
-@keyframes fuwafuwa {
-  0% {
-    transform: translate(0, 0) rotate(-7deg);
-  }
-  50% {
-    transform: translate(0, -7px) rotate(0deg);
-  }
-  100% {
-    transform: translate(0, 0) rotate(7deg);
-  }
-}
+
 #concept .leaf_concept_bg {
   position: absolute;
   right: 5%;
   top: 80%;
-  animation: fuwafuwa 3s ease-in-out infinite alternate;
+  animation: fuwafuwa 6s ease-in-out infinite alternate;
   background: url(../img/ico-apple.svg) no-repeat center center / 60px auto;
   display: inline-block;
   transition: 1.5s ease-in-out;
@@ -406,13 +398,13 @@ h2 {
 }
 @keyframes fuwafuwa {
   0% {
-    transform: translate(0, 0) rotate(7deg);
+    transform: translate(0, 0) rotate(25deg);
   }
   50% {
-    transform: translate(0, -7px) rotate(0deg);
+    transform: translate(0, -25px) rotate(0deg);
   }
   100% {
-    transform: translate(0, 0) rotate(-7deg);
+    transform: translate(0, 0) rotate(-25deg);
   }
 }
 
@@ -572,12 +564,7 @@ a.btn--circle:hover i {
   justify-content: center;
   align-items: center;
 }
-/*.circle {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background-color: #77aaad;
-}*/
+
 .btn_wrap p {
   text-align: center;
   padding-top: 10px;
@@ -697,6 +684,21 @@ a.btn--circle:hover i {
   left: 25%;
   width: 10%;
   height: auto;
+  animation: fuwafuwa 6s ease-in-out infinite alternate;
+  background: url(../img/ico-apple.svg) no-repeat center center / 60px auto;
+  display: inline-block;
+  transition: 1.5s ease-in-out;
+}
+@keyframes fuwafuwa {
+  0% {
+    transform: translate(0, 0) rotate(25deg);
+  }
+  50% {
+    transform: translate(0, -25px) rotate(0deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(-25deg);
+  }
 }
 .service_title {
   position: absolute;
@@ -729,6 +731,7 @@ a.btn--circle:hover i {
   margin: 0 auto;
   padding: 30% 0 20% 0;
 }
+
 .service_frex {
   width: 88%;
   margin: 0 auto 20% auto;
@@ -784,6 +787,16 @@ a.btn--circle:hover i {
   width: 80%;
   line-height: 1.8rem;
   margin: 7% auto;
+}
+.anim {
+  opacity: 0;
+  transform: translate(0, 0);
+  transition: all 1s;
+  transform: translate(-40px, 0);
+}
+.scrollin {
+  opacity: 1 !important;
+  transform: translate(0, 0) !important;
 }
 @media screen and (max-width: 1150px) {
   .service_wrap {
@@ -888,7 +901,7 @@ a.btn--circle:hover i {
 }
 .worksbg_object .img_kumo {
   position: absolute;
-  top: -35%;
+  top: -30%;
   z-index: -1;
 }
 
@@ -980,6 +993,7 @@ a.btn--circle:hover i {
   height: 10px;
   display: block;
   content: "";
+  opacity: 1;
 }
 .slick-dots li button {
   padding: 0;
@@ -1005,6 +1019,12 @@ a.btn--circle:hover i {
   button {
     background: #ffd78d;
   }
+}
+.slick-prev:hover,
+.slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus {
+  background-color: #ffd78d;
 }
 @media screen and (max-width: 1070px) {
   .worksbg_object .white_kumo {
@@ -1064,15 +1084,6 @@ a.btn--circle:hover i {
   .works_wrap {
     padding-top: 40%;
   }
-  .slick-prev {
-    top: 40%;
-    left: 5%;
-  }
-
-  .slick-next {
-    top: 40%;
-    right: 5%;
-  }
 
   .slick-dots li button:before {
     content: "";
@@ -1088,6 +1099,40 @@ a.btn--circle:hover i {
   .flower_works_bg {
     top: 90%;
     left: 5%;
+  }
+  .slick-dots {
+    bottom: -70px;
+  }
+  .slick-dots li button {
+    width: 80px;
+    height: 6px;
+  }
+  .slick-dots li {
+    width: 80px;
+    height: 6px;
+    margin: 0 5px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .works_wrap {
+    padding-top: 20%;
+  }
+  .slide.slick-center img {
+    transform: scale(0.6);
+  }
+  .slick-prev {
+    top: 40%;
+    left: 5%;
+  }
+  .slick-next {
+    top: 40%;
+    right: 5%;
+  }
+  .slide img {
+    width: 400px;
+    height: auto;
+    transition: transform 0.3s;
+    transform-origin: center;
   }
 }
 #contact {
@@ -1341,8 +1386,8 @@ small {
 }
 /*** 平垣内追加部分 ***/
 .cloud {
-  transform: translateY(40%);
-  transition: 0.5s;
+  transform: translateY(30%);
+  transition: 1.5s;
 }
 .cloud.active {
   transform: translate(0);

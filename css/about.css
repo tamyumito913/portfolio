@@ -39,15 +39,20 @@ h1 {
   display: none;
 }
 
-.menu_object {
-  width: 158px;
-  aspect-ratio: 1;
-  border-radius: 50%;
+.pc-nav-contact {
+  position: relative;
+}
+.pc-nav-contact::before {
+  content: "";
+  display: block;
+  width: 200px;
+  height: 200px;
   background-color: #ffd78d;
-  position: fixed;
-  top: -55px;
-  right: -33px;
-  z-index: 99;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -60px;
+  left: -50px;
+  z-index: -1;
 }
 @media screen and (max-width: 850px) {
   .pc_nav {

@@ -5,18 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script type="text/javascript">
-        let submitted = false;
-    </script>
-    <iframe name="hidden_iframe" id="hidden_iframe" style="display: none"
-        onload="if(submitted){window.location='THANKSページのURL';}"></iframe>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/thanks.css">
 </head>
 
 <body>
-    <p>お問い合わせいただきありがとうございました。</p>
-    <form
-        action="https://docs.google.com/forms/u/1/d/e/1FAIpQLSe00eJN0CWayVTtmGW0ONrc6MT8bA5no3F9iHgbGwaOm18KRw/formResponse"
-        method="POST" target="hidden_iframe" onsubmit="submitted=true;" class="c-form">
+    <div class="thanks">
+        <h1>Thanks you</h1>
+        <p>この度はUPSY DAISY DESIGNにお問い合わせいただきありがとうございます。2営業日以内にご連絡させていただきます。
+        </p>
+        <div class="logo"><img src="./2x/アセット 3@2x.png" alt=""></div>
+        <a href="./index.html">HOMEへ戻る</a>
+    </div>
+
 </body>
 
 </html>
