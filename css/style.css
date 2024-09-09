@@ -1129,10 +1129,10 @@ a.btn--circle:hover i {
     right: 5%;
   }
   .slide img {
-    width: 400px;
-    height: auto;
+    transform: scale(0.6);
     transition: transform 0.3s;
     transform-origin: center;
+    padding-top: 40px;
   }
 }
 #contact {
