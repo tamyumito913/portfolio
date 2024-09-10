@@ -275,6 +275,17 @@
                     }
                 ]
             });
+            if ($(window).width() <= 600) {
+                $(".slick-slide").css("width", $(window).width());
+            }
+            // ウィンドウリサイズ時にも適用
+            $(window).resize(function () {
+                if ($(window).width() <= 600) {
+                    $(".slick-slide").css("width", $(window).width())
+                } else {
+                    $(".slick-slide").css("width", "auto")
+                }
+            });
             // 平垣内追加部分
             var cloud = $('.cloud'); //雲にcloudクラスを追加して取得
             console.log(cloud)

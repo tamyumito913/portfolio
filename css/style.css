@@ -219,7 +219,7 @@ h2 {
     aspect-ratio: 1;
   }
   .animation p {
-    font-size: 16px;
+    font-size: 15px;
     line-height: 2;
     width: 282px;
   }
@@ -318,7 +318,33 @@ h2 {
     font-family: Palatino;
   }
 }
-
+@media screen and (max-width: 375px) {
+  .animation p {
+    font-size: 15px;
+    line-height: 2;
+    width: 220px;
+  }
+  .flame_top {
+    top: 10px;
+    left: 155px;
+  }
+  .flame_top2 {
+    top: 40px;
+    left: 33px;
+  }
+  .flame_bottom {
+    bottom: 150px;
+    left: 33px;
+  }
+  .flame_bottom2 {
+    bottom: 33px;
+    left: 33px;
+  }
+  .flame_rigth {
+    top: 170px;
+    right: 30px;
+  }
+}
 .kumo-img {
   max-width: 100%;
   position: relative;
@@ -657,7 +683,7 @@ a.btn--circle:hover i {
 }
 @media screen and (max-width: 400px) {
   .about_text p {
-    font-size: 4vw;
+    font-size: 3.5vw;
   }
   .about_wrap .about_img2 {
     width: 50vw;
@@ -1084,12 +1110,14 @@ a.btn--circle:hover i {
   .works_wrap {
     padding-top: 40%;
   }
-
+  .slide.slick-center img {
+    transform: none;
+  }
   .slick-dots li button:before {
     content: "";
     display: block;
-    width: 80px;
-    height: 6px;
+    width: 60px;
+    height: 8px;
     background-color: #fff;
     opacity: 1;
   }
@@ -1101,24 +1129,16 @@ a.btn--circle:hover i {
     left: 5%;
   }
   .slick-dots {
-    bottom: -70px;
+    bottom: -50px;
   }
   .slick-dots li button {
-    width: 80px;
-    height: 6px;
+    width: 60px;
+    height: 8px;
   }
   .slick-dots li {
-    width: 80px;
-    height: 6px;
+    width: 60px;
+    height: 8px;
     margin: 0 5px;
-  }
-}
-@media screen and (max-width: 375px) {
-  .works_wrap {
-    padding-top: 20%;
-  }
-  .slide.slick-center img {
-    transform: scale(0.6);
   }
   .slick-prev {
     top: 40%;
@@ -1127,6 +1147,50 @@ a.btn--circle:hover i {
   .slick-next {
     top: 40%;
     right: 5%;
+  }
+  .slide h3 {
+    font-size: 6.5vw;
+    margin-bottom: 10px;
+  }
+  .slide p {
+    font-size: 5vw;
+  }
+  .slick-slide img {
+    margin-bottom: 35px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .works_wrap {
+    padding-top: 20%;
+  }
+  .slide.slick-center img {
+    transform: none;
+  }
+  .slick-prev {
+    width: 25px;
+    height: 25px;
+    top: 40%;
+    left: 5%;
+  }
+  .slick-prev:before {
+    width: 7px;
+    height: 7px;
+    border-top: 1.5px solid #fff;
+    border-left: 1.5px solid #fff;
+  }
+  .slick-next {
+    width: 25px;
+    height: 25px;
+    top: 40%;
+    right: 5%;
+  }
+  .slick-next:before {
+    width: 7px;
+    height: 7px;
+    border-top: 1.5px solid #fff;
+    border-right: 1.5px solid #fff;
+    transform: rotate(45deg);
+    translate: 100%;
   }
   .slide img {
     transform: scale(0.6);
