@@ -227,7 +227,6 @@ p.hover {
   margin-top: 8rem;
 }
 .modal-header h3 {
-  font-size: 2vw;
   font-weight: lighter;
   margin: 1rem auto 5rem auto;
 }
@@ -314,6 +313,7 @@ p.hover {
   max-width: 58%;
   margin: 0 auto;
   text-align: left;
+  line-height: 1.6;
   margin-bottom: 4.4%;
 }
 /* ボタンのスタイル */
@@ -568,6 +568,7 @@ p.hover {
   max-width: 36%;
   margin: 0 auto;
   text-align: left;
+  line-height: 1.6;
   margin-bottom: 4.4%;
 }
 /* ボタンのスタイル */
@@ -620,6 +621,7 @@ p.hover {
   .modal-container .contact .contact_text {
     max-width: 80%;
     margin-bottom: 40%;
+    line-height: 1.6;
   }
 }
 footer {

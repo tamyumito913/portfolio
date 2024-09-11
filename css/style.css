@@ -328,20 +328,20 @@ h2 {
     gap: 40px;
   }
   .flame_top {
-    top: 5px;
-    left: 150px;
+    top: 8px;
+    left: 155px;
   }
   .flame_top2 {
     top: 40px;
-    left: 25px;
+    left: 33px;
   }
   .flame_bottom {
-    bottom: 150px;
-    left: 25px;
+    bottom: 140px;
+    left: 33px;
   }
   .flame_bottom2 {
-    bottom: 20px;
-    left: 25px;
+    bottom: 25px;
+    left: 32px;
   }
   .flame_rigth {
     top: 250px;
@@ -688,6 +688,7 @@ a.btn--circle:hover i {
 @media screen and (max-width: 400px) {
   .about_text p {
     font-size: 3.5vw;
+    line-height: 1.6;
   }
   .about_wrap .about_img2 {
     width: 50vw;
