@@ -318,11 +318,11 @@ h2 {
     font-family: Palatino;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 400px) {
   .animation p {
     font-size: 15px;
     line-height: 2;
-    width: 200px;
+    width: 190px;
   }
   .mv_flex {
     gap: 40px;
