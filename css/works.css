@@ -66,7 +66,7 @@ h1 {
     position: fixed;
     top: -57px;
     right: -40px;
-    z-index: 101;
+    z-index: 10;
     width: 158px;
     height: 158px;
     background-color: #ffd78d;
@@ -230,6 +230,7 @@ p.hover {
 .modal-header h3 {
   font-weight: lighter;
   margin: 1rem auto 5rem auto;
+  padding: 0 5%;
 }
 .modal-container .line {
   align-items: center;
@@ -240,7 +241,7 @@ p.hover {
   padding-bottom: 5px;
   position: relative;
   max-width: 51%;
-  margin: 0 auto;
+  margin: 15% auto;
 }
 .modal-container .line::after,
 .modal-container .line::before {
@@ -508,7 +509,9 @@ p.hover {
   .modal-text .flex {
     width: 100%;
   }
-
+  .modal-header h3 {
+    margin: 1rem auto 3rem auto;
+  }
   .modal-text p {
     max-width: 100%;
   }
@@ -517,45 +520,46 @@ p.hover {
   }
   .modal-container .btn a {
     width: 80%;
+    font-size: 14px;
   }
   .modal-container button {
     width: 80px;
     height: 80px;
   }
-}
-@media screen and (max-width: 400px) {
-  .modal-container {
-    max-width: 80%;
-    margin-top: 15%;
+  .line {
+    align-items: center;
+    border-bottom: solid 1px#826b63;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5px;
+    position: relative;
+    max-width: 51%;
+    margin: 0 auto 15% auto;
+  }
+  .line::after,
+  .line::before {
+    content: "";
+    background: #826b63;
+    border-radius: 50%;
+    height: 5px;
+    width: 5px;
+    bottom: -3px;
+    position: absolute;
+  }
+  .line::after {
+    right: -2px;
+  }
+  .line::before {
+    left: 0;
   }
 }
-.line {
-  align-items: center;
-  border-bottom: solid 1px#826b63;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  padding-bottom: 5px;
-  position: relative;
-  max-width: 51%;
-  margin: 0 auto 15% auto;
+@media screen and (max-width: 600px) {
+  .modal-container {
+    max-width: 80%;
+  }
 }
-.line::after,
-.line::before {
-  content: "";
-  background: #826b63;
-  border-radius: 50%;
-  height: 5px;
-  width: 5px;
-  bottom: -3px;
-  position: absolute;
-}
-.line::after {
-  right: -2px;
-}
-.line::before {
-  left: 0;
-}
+
 .contact {
   text-align: center;
 }
@@ -623,7 +627,7 @@ p.hover {
 @media screen and (max-width: 400px) {
   .modal-container .contact .contact_text {
     max-width: 80%;
-    margin-bottom: 40%;
+    margin-bottom: 20%;
     line-height: 1.6;
   }
 }

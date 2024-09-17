@@ -991,10 +991,8 @@ h2 {
 
 .slick-prev {
   top: 80%;
-  left: 22%;
+  left: 23%;
   z-index: 99;
-}
-.slick-prev {
   background-color: #ffd78d;
   width: 35px;
   height: 35px;
@@ -1012,7 +1010,7 @@ h2 {
 }
 .slick-next {
   top: 80%;
-  right: 22%;
+  right: 23%;
   z-index: 99;
   background-color: #ffd78d;
   width: 35px;
