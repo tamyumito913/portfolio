@@ -475,13 +475,13 @@ h2 {
     font-size: 6.1vw;
   }
   #concept .flower_concept_bg {
-    width: 14%;
+    width: 20%;
     height: auto;
     left: 10%;
-    top: 10%;
+    top: 0;
   }
   #concept .leaf_concept_bg {
-    width: 13%;
+    width: 17%;
     height: auto;
   }
 }
@@ -683,12 +683,13 @@ h2 {
     width: 70%;
   }
 
-  a.btn--circle {
+  .circle {
     width: 75px;
     height: 75px;
     padding: 0;
     background: #77aaad;
     border-radius: 50%;
+    margin: 30% auto 0 auto;
   }
   .flower_about_bg {
     width: 20%;
@@ -886,9 +887,9 @@ h2 {
     width: 16%;
   }
   .flower_service_bg {
-    width: 15%;
-    top: 90%;
-    left: 10%;
+    width: 22%;
+    top: 92%;
+    left: 9%;
   }
 }
 
@@ -903,6 +904,8 @@ h2 {
   position: relative;
 }
 .flower_works_bg {
+  width: 12%;
+  height: auto;
   position: absolute;
   top: 75%;
   left: 5%;
@@ -1139,7 +1142,8 @@ h2 {
     margin: 0 12px;
   }
   .flower_works_bg {
-    top: 90%;
+    width: 25%;
+    top: 84%;
     left: 5%;
   }
   .slick-dots {
