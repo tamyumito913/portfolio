@@ -163,6 +163,7 @@ h1 {
   width: 30%;
   height: auto;
   margin-bottom: 3.4%;
+  border: solid 1px #ffd78d;
   box-shadow: 5px 5px 5px #af6e058f;
   position: relative;
   cursor: pointer;
@@ -494,7 +495,7 @@ p.hover {
   .works_box .modal-botton {
     width: 100%;
     height: auto;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
   }
   h1 {
     font-size: 13vw;

@@ -214,7 +214,7 @@ h1 {
   left: 6%;
 }
 .service_frex p {
-  width: 100%;
+  width: 80%;
   line-height: 1.8rem;
   margin: 7% auto;
 }
@@ -266,6 +266,9 @@ h1 {
   .service_detail_flame {
     width: 100%;
     border-radius: 250px 250px 0 0;
+  }
+  .service_frex p {
+    width: 100%;
   }
   .service_title {
     top: 4%;

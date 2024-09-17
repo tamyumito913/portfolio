@@ -51,7 +51,7 @@
         <div class="mv_flex">
             <div class="logo"><img src="./images/logo.png" alt=""></div>
             <div class="animation">
-                <p>UPSY DAISY(アプシーデイジー)は
+                <p class="marker">UPSY DAISY(アプシーデイジー)は
                     「せーの！」や「えいっ！」など、立ち上がる時に使う前向きな表現です。<br>
                     デザインの力でポジティブな変化を生み、最良の結果をと共に目指すという想いが込められています</p>
             </div>
@@ -73,7 +73,7 @@
         <img class="flower_concept_bg" src="./images/scuNHo@2x.png" alt="花">
         <img class="leaf_concept_bg" src="./images/usGlKS (2)@2x.png" alt="葉">
         <div class="concept">
-            <div class="concept_title">
+            <div class="concept_title scroll">
                 <h2>CONCEPT</h2>
                 <p>コンセプト</p>
             </div>
@@ -89,7 +89,7 @@
     <div id="about">
         <div class="about">
             <div class="about_object"></div>
-            <div class="about_title">
+            <div class="about_title scroll">
                 <p>わたしについて</p>
                 <h2>ABOUT</h2>
             </div>
@@ -105,13 +105,13 @@
                 <img class="about_img2" src="./images/about@2x.png" alt="">
             </div>
             <div class="btn_wrap">
-                <div class="btn">
-                    <a href="./about.html" class="btn btn--circle btn--circle-c"><i class="fas fa-arrow-up"></i></a>
-                </div>
+                <a href="./about.html" class="circle">
+                    <div class="arrow"></div>
+                </a>
                 <p>もっと見る</p>
             </div>
 
-            <img class="flower_about_bg" src="./images/2QvYk6@2x.png" alt="花">
+            <img class="flower_about_bg" src="./images/LLgGO3@2x.png" alt="花">
         </div>
     </div>
     <div id="service">
@@ -119,7 +119,7 @@
             <img class="leaf_service_bg" src="./images/usGlKS@2x.png" alt="葉">
             <img class="flower_service_bg" src="./images/2QvYk6@2x.png" alt="花">
 
-            <div class="service_title">
+            <div class="service_title scroll">
                 <h2>SERVICE</h2>
                 <p>サービス</p>
             </div>
@@ -155,7 +155,7 @@
     <div id="works">
         <div class="works">
             <img class=flower_works_bg src="./images/purple-flower.png" alt="" width="12%" height="auto">
-            <div class="works_title">
+            <div class="works_title scroll">
                 <p>制作実績</p>
                 <h2>WORKS</h2>
             </div>
@@ -184,10 +184,11 @@
                     </div>
                 </div>
             </div>
+
             <div class="btn_wrap">
-                <div class="btn">
-                    <a href="./works.html" class="btn btn--circle btn--circle-c"><i class="fas fa-arrow-up"></i></a>
-                </div>
+                <a href="./works.html" class="circle">
+                    <div class="arrow"></div>
+                </a>
                 <p>もっと見る</p>
             </div>
 
@@ -196,7 +197,7 @@
     <div id="contact">
         <img class="img1" src="./images/contact-bg.png" alt="" width="100%">
         <div class="contact">
-            <div class="contact_title">
+            <div class="contact_title scroll">
                 <p>お問い合わせ</p>
                 <h2>CONTACT</h2>
             </div>
@@ -312,6 +313,7 @@
                     }
                 });
             });
+
         })
     </script>
     <script type="text/javascript">
